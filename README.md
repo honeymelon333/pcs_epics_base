@@ -2,14 +2,16 @@
 **作者：Johnson Han
 日期：2020-02-02** 
 
-|运行环境 centos 7|
-|============================｜
+运行环境： centos 7
+
+<center>软件版本号</center>
+
 |名称|版本号|
-|:------|------：|
-|Linux内核| 3.10.0-1062.9.1.rt56.1033.el7.x86_64|
-|gcc | 4.8.5| 
-|java|openjdk "1.8.0_232"|
-|CSS版本| cs-studio-ess-4.6.1.24|
+|-----|------|
+|Linux| 3.10.0-1062.9.1.rt56.1033.el7.x86_64|
+|gcc|4.8.5|
+|javaopenjdk |1.8.0_232|
+|CSS版本|cs-studio-ess-4.6.1.24|
 ##一、 EPICS base 更新日志 
 ###  *base 文件夹*
 >基于 EPICS Base 3.14.12.5
@@ -18,4 +20,18 @@
 3. 增加了SCAN 域的选项：“600 Second” “300 second” “.05 second”  
 ---
 ### *HeaterIoc 文件夹*
-<p>加热器IOC，包含PID温度控制、启停控制和超温连锁和复位</p>
+> 加热器IOC，包含PID温度控制、启停控制和超温连锁和复位
+
+`1.加强器启停控制部分`
+
+![VDCT 变量关系 ](/images/heaterCtl.png "加热器开关控制")
+
+<center>启动控制模块变量说明
+
+|名称|变量名称|注释|类型|
+|--|--|--|--|
+|启动控制|$(Heater):start|1:启动 0：停止|bo|
+|开关输出|$(Heater):CtrlOut|1:启动 0:停止|bi|
+|启动RS触发器|$(Heater):startRS|公式: A && (!B) \|\| ( (!B) && C )。 其中A:\$(Heater):start B: \$(Heater):alarm C:\$(Heater):startRS |calc|
+
+
