@@ -1,4 +1,7 @@
 epicsEnvSet("ARCH","linux-x86_64")
 epicsEnvSet("IOC","iocexample")
-epicsEnvSet("TOP","/usr/local/epics/apps/Ftest")
+epicsEnvSet("TOP","/home/hanlf/gitcode/pcs_epics_base/HeaterIoc")
 epicsEnvSet("EPICS_BASE","/usr/local/epics/base")
+epicsEnvSet("EPICS_CAS_SERVER_PORT","9001")
+epicsEnvSet("EPICS_CA_ADDR_LIST","127.0.0.1:9001")
+epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST","no")

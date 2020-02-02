@@ -23,6 +23,7 @@ record(epid, "$(Heater):pid") {
    field(LOLO, "0")
    field(HSV, "MINOR")
    field(DRVL, "0")
+   field(EGU, "%")
    field(DRVH, "24576")
    field(SMSL, "closed_loop")
    field(HOPR, "24576")
@@ -40,7 +41,7 @@ record(calc, "$(Heater):targetTempCalc") {
 record(calc, "$(Heater):startRS") {
    field(DESC, "RS")
    field(FLNK, "$(Heater):CtrlOut  PP NMS")
-   field(CALC, "A && (!(B||D)) || ( (!(B||D)) && C )")
+   field(CALC, "A && (!(B&&D)) || ( (!(B&&D)) && C )")
    field(INPC, "$(Heater):startRS.VAL  PP NMS")
    field(HOPR, "10")
    field(HIHI, "0.9")
@@ -107,12 +108,10 @@ record(bo, "$(Heater):CtrlOut") {
 }
 
 record(ai, "$(Heater):powerOutput") {
+   field(EGUL, "0")
+   field(EGUF, "100")
    field(LINR, "LINEAR")
    field(INP, "$(Heater):pid.OVAL PP NMS")
-   field(DTYP, "Raw Soft Channel")
-   field(ASLO, "")
-   field(ESLO, "0.00406901")
-   field(EGU, "%")
 }
 
 record(ao, "$(Heater):alarmTempSet") {
@@ -151,6 +150,7 @@ record(bo, "$(Heater):stop") {
 #! Field("$(Heater):pid.LOLO", -16777216, 0, "")
 #! Field("$(Heater):pid.HSV", -16777216, 0, "")
 #! Field("$(Heater):pid.DRVL", -16777216, 0, "")
+#! Field("$(Heater):pid.EGU", -16777216, 0, "")
 #! Field("$(Heater):pid.DRVH", -16777216, 0, "")
 #! Field("$(Heater):pid.SMSL", -16777216, 0, "")
 #! Field("$(Heater):pid.HOPR", -16777216, 0, "")
@@ -219,12 +219,10 @@ record(bo, "$(Heater):stop") {
 #! Field("$(Heater):CtrlOut.OSV", -16777216, 0, "")
 #! Field("$(Heater):CtrlOut.ZNAM", -16777216, 0, "")
 #! Record("$(Heater):powerOutput", 520, 20, -16777216, 0, "null")
+#! Field("$(Heater):powerOutput.EGUL", -16777216, 0, "")
+#! Field("$(Heater):powerOutput.EGUF", -16777216, 0, "")
 #! Field("$(Heater):powerOutput.LINR", -16777216, 0, "")
 #! Field("$(Heater):powerOutput.INP", -16777216, 0, "")
-#! Field("$(Heater):powerOutput.DTYP", -16777216, 0, "")
-#! Field("$(Heater):powerOutput.ASLO", -16777216, 0, "")
-#! Field("$(Heater):powerOutput.ESLO", -16777216, 0, "")
-#! Field("$(Heater):powerOutput.EGU", -16777216, 0, "")
 #! Record("$(Heater):alarmTempSet", 20, 1000, -16777216, 0, "null")
 #! Field("$(Heater):alarmTempSet.ASLO", -16777216, 0, "")
 #! Record("$(Heater):targetTempSet", 40, 220, -16777216, 0, "null")
@@ -233,7 +231,7 @@ record(bo, "$(Heater):stop") {
 #! Field("$(Heater):stop.ONAM", -16777216, 0, "")
 #! Field("$(Heater):stop.ZSV", -16777216, 0, "")
 #! Field("$(Heater):stop.ZNAM", -16777216, 0, "")
-#! View(522, 310, 0.77)
+#! View(522, 592, 0.77)
 #! Link("$(Heater):targetTempCalc.FLNK", "$(Heater):pid")
 #! Link("$(Heater):targetTempCalc.VAL", "$(Heater):pid.STPL")
 #! Link("$(Heater):start.VAL", "$(Heater):startRS.INPA")
