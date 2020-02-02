@@ -1,0 +1,16 @@
+[symbol2]
+bbox 96 128 128 160
+port 122 134 -100 0 o symbol 0 128 128 0
+port 78 166 -100 0 p symbol 0 96 160 0
+uniq 1
+[tools]
+[attributes]
+p 80 64 100 0 0 revision:2.2
+p 80 96 50 0 0 model:null
+[layers]
+<symbol>
+v 0 96 160
+120 128
+128 128
+_
+[comments]

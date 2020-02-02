@@ -1,0 +1,556 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+
+
+<ul id="index">
+  <li><a href="#NAME">NAME</a></li>
+  <li><a href="#SYNOPSIS">SYNOPSIS</a></li>
+  <li><a href="#DESCRIPTION">DESCRIPTION</a></li>
+  <li><a href="#FUNCTIONS">FUNCTIONS</a>
+    <ul>
+      <li><a href="#Constructor">Constructor</a></li>
+      <li><a href="#Object-Methods">Object Methods</a></li>
+      <li><a href="#Channel-Data">Channel Data</a>
+        <ul>
+          <li><a href="#Metadata">Metadata</a></li>
+          <li><a href="#Fixed-Fields">Fixed Fields</a></li>
+          <li><a href="#Ephemeral-Fields">Ephemeral Fields</a></li>
+        </ul>
+      </li>
+      <li><a href="#Class-Methods">Class Methods</a></li>
+    </ul>
+  </li>
+  <li><a href="#ERROR-HANDLING">ERROR HANDLING</a></li>
+  <li><a href="#SEE-ALSO">SEE ALSO</a></li>
+  <li><a href="#AUTHOR">AUTHOR</a></li>
+  <li><a href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a></li>
+</ul>
+
+<h1 id="NAME">NAME</h1>
+
+<p>CA - Perl 5 interface to EPICS Channel Access</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<pre><code>    use lib &#39;/path/to/cap5/lib/perl&#39;;
+    use CA;
+
+    my $chan = CA-&gt;new(&#39;pvname&#39;);
+    CA-&gt;pend_io(1);
+
+    my @access = (&#39;no &#39;, &#39;&#39;);
+    printf &quot;    PV name:       %s\n&quot;, $chan-&gt;name;
+    printf &quot;    Data type:     %s\n&quot;, $chan-&gt;field_type;
+    printf &quot;    Element count: %d\n&quot;, $chan-&gt;element_count;
+    printf &quot;    Host:          %s\n&quot;, $chan-&gt;host_name;
+    printf &quot;    State:         %s\n&quot;, $chan-&gt;state;
+    printf &quot;    Access:        %sread, %swrite\n&quot;,
+        $access[$chan-&gt;read_access], $access[$chan-&gt;write_access];
+
+    die &quot;PV not found!&quot; unless $chan-&gt;is_connected;
+
+    $chan-&gt;get;
+    CA-&gt;pend_io(1);
+    printf &quot;    Value:         %s\n&quot;, $chan-&gt;value;
+
+    $chan-&gt;create_subscription(&#39;v&#39;, \&amp;callback, &#39;DBR_TIME_DOUBLE&#39;);
+    CA-&gt;pend_event(10);
+
+    sub callback {
+        my ($chan, $status, $data) = @_;
+        if ($status) {
+            printf &quot;%-30s %s\n&quot;, $chan-&gt;name, $status;
+        } else {
+            printf &quot;    Value:         %g\n&quot;, $data-&gt;{value};
+            printf &quot;    Severity:      %s\n&quot;, $data-&gt;{severity};
+            printf &quot;    Timestamp:     %.6f\n&quot;,
+                $data-&gt;{stamp} + $data-&gt;{stamp_fraction};
+        }
+    }</code></pre>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><code>CA</code> is an efficient interface to the EPICS Channel Access client library for use by Perl 5 programs. It provides most of the functionality of the C library (omitting Synchronous Groups) but only handles the three standard Perl data types integer (long), floating point (double) and string (now including long strings). Programmers who understand the C API will very quickly pick up how to use this library since the calls and concepts are virtually identical.</p>
+
+<h1 id="FUNCTIONS">FUNCTIONS</h1>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+
+<dt id="new-NAME">new( <i>NAME</i> )</dt>
+<dd>
+
+</dd>
+<dt id="new-NAME-SUB">new( <i>NAME</i>, <i>SUB</i> )</dt>
+<dd>
+
+<p>Create a channel for the named PV. If given, <i>SUB</i> will be called whenever the connection state of the channel changes. The arguments passed to <i>SUB</i> are the channel object and a scalar value that is true if the channel is now up.</p>
+
+<p>The underlying CA channel will be cleaned up properly when the channel object is garbage-collected by Perl.</p>
+
+</dd>
+</dl>
+
+<h2 id="Object-Methods">Object Methods</h2>
+
+<p>The following methods are provided for channel objects returned by <code>CA-&gt;new()</code>.</p>
+
+<dl>
+
+<dt id="name">name</dt>
+<dd>
+
+<p>The PV name provided when this channel was created.</p>
+
+</dd>
+<dt id="field_type">field_type</dt>
+<dd>
+
+<p>Returns the native DBF type of the process variable as a string, or the string <code>TYPENOTCONN</code> if unconnected.</p>
+
+</dd>
+<dt id="element_count">element_count</dt>
+<dd>
+
+<p>The maximum array element count from the server. Zero if the channel is not connected.</p>
+
+</dd>
+<dt id="host_name">host_name</dt>
+<dd>
+
+<p>A string containing the server&#39;s hostname and port number. If the channel is disconnected it will report <code>&lt;disconnected&gt;</code>.</p>
+
+</dd>
+<dt id="read_access">read_access</dt>
+<dd>
+
+</dd>
+<dt id="write_access">write_access</dt>
+<dd>
+
+<p>A true/false value that indicates whether the client has read or write access to the specified channel.</p>
+
+</dd>
+<dt id="state">state</dt>
+<dd>
+
+<p>A string giving the current connection state of the channel, one of <code>never connected</code>, <code>previously connected</code>, <code>connected</code> or <code>closed</code>.</p>
+
+</dd>
+<dt id="is_connected">is_connected</dt>
+<dd>
+
+<p>Returns <code>true</code> if the channel is currently connected, else <code>false</code>. Use this in preference to the equivalent code <span style="white-space: nowrap;"><code>$chan-&gt;state eq &#39;connected&#39;</code></span>.</p>
+
+</dd>
+<dt id="get">get</dt>
+<dd>
+
+</dd>
+<dt id="value">value</dt>
+<dd>
+
+<p>The <code>get</code> method makes a <code>ca_get()</code> request for a single element of the Perl type closest to the channel&#39;s native data type; a <code>DBF_ENUM</code> field will be fetched as a DBF_STRING, and a <code>DBF_CHAR</code> array with multiple elements will converted into a Perl string. Once the server has returned the value (for which see the <code>pend_io</code> function below) it can be retrieved using the channel&#39;s <code>value</code> method. Note that the <code>get</code> method deliberately only provides limited capabilities; the <code>get_callback</code> method must be used for more complex requirements.</p>
+
+</dd>
+<dt id="get_callback-SUB">get_callback( <i>SUB</i> )</dt>
+<dd>
+
+</dd>
+<dt id="get_callback-SUB-TYPE">get_callback( <i>SUB</i>, <i>TYPE</i> )</dt>
+<dd>
+
+</dd>
+<dt id="get_callback-SUB-COUNT">get_callback( <i>SUB</i>, <i>COUNT</i> )</dt>
+<dd>
+
+</dd>
+<dt id="get_callback-SUB-TYPE-COUNT">get_callback( <i>SUB</i>, <i>TYPE</i>, <i>COUNT</i> )</dt>
+<dd>
+
+<p>The <code>get_callback</code> method takes a subroutine reference or name and calls that routine when the server returns the data requested. With no other arguments the data type requested will be the widened form of the channel&#39;s native type (widening is discussed below), and if the channel is an array the request will fetch all available elements.</p>
+
+<p>The element count can be overridden by providing an integer argument in the range 0 .. <code>element_count</code>, where zero means use the current length from the server. Note that the count argument must be an integer; add 0 to it if it is necessary to convert it from a string. The optional data type <i>TYPE</i> should be a string naming the desired <code>DBR_xxx_yyy</code> type; the actual type used will have the <code>yyy</code> part widened to one of <code>STRING</code>, <code>CHAR</code>, <code>LONG</code> or <code>DOUBLE</code>. The valid type names are listed in the <a href="#SEE-ALSO">Channel Access Reference Manual</a> under the section titled Channel Access Data Types; look in the CA Type Code column of the two tables.</p>
+
+<p>The callback subroutine will be given three arguments: the channel object, a status value from the server, and the returned data. If there were no errors the status value will be <code>undef</code> and the data will be valid; if an error occurred the data will be <code>undef</code> and the status a printable string giving more information. The format of the data is described under <a href="#Channel-Data">&quot;Channel Data&quot;</a> below.</p>
+
+<p>Callback subroutines should only call Perl&#39;s <code>exit</code>, <code>die</code> or similar functions if they are expecting the program to exit at that time; attempts to <code>die</code> with an exception object in the callback and catch that using <code>eval</code> in the main thread are not likely to succeed and will probably result in a crash. Callbacks should not perform any operations that would block for more than a fraction of a second as this will hold up network communications with the relevant server and could cause the Perl program and/or the Channel Access server to crash. Calling <code>CA-&gt;pend_event</code> from within a callback is not permitted by the underlying Channel Access library.</p>
+
+</dd>
+<dt id="create_subscription-MASK-SUB">create_subscription( <i>MASK</i>, <i>SUB</i> )</dt>
+<dd>
+
+</dd>
+<dt id="create_subscription-MASK-SUB-TYPE">create_subscription( <i>MASK</i>, <i>SUB</i>, <i>TYPE</i> )</dt>
+<dd>
+
+</dd>
+<dt id="create_subscription-MASK-SUB-COUNT">create_subscription( <i>MASK</i>, <i>SUB</i>, <i>COUNT</i> )</dt>
+<dd>
+
+</dd>
+<dt id="create_subscription-MASK-SUB-TYPE-COUNT">create_subscription( <i>MASK</i>, <i>SUB</i>, <i>TYPE</i>, <i>COUNT</i> )</dt>
+<dd>
+
+<p>Register a state change subscription and specify a subroutine to be called whenever the process variable undergoes a significant state change. <i>MASK</i> must be a string containing one or more of the letters <code>v</code>, <code>l</code>, <code>a</code> and <code>p</code> which indicate that this subscription is for Value, Log (Archive), Alarm and Property changes. The subroutine <i>SUB</i> is called as described for the <code>get_callback</code> method above, and the same optional <i>TYPE</i> and <i>COUNT</i> arguments may be supplied to modify the data type and element count requested from the server.</p>
+
+<p>The <code>create_subscription</code> method returns a <code>ca::subscription</code> object which is required to cancel that particular subscription. Either call the <code>clear</code> method on that object directly, or pass it to the <code>CA-&gt;clear_subscription</code> class method.</p>
+
+</dd>
+<dt id="put-VALUE">put( <i>VALUE</i> )</dt>
+<dd>
+
+</dd>
+<dt id="put-VALUE-VALUE">put( <i>VALUE</i>, <i>VALUE</i>, ... )</dt>
+<dd>
+
+<p>The <code>put</code> method makes a <code>ca_put()</code> or <code>ca_array_put()</code> call depending on the number of elements given in its argument list. The data type used will be the native type of the channel, widened to one of <code>STRING</code>, array of <code>CHAR</code>, <code>LONG</code> or <code>DOUBLE</code>.</p>
+
+</dd>
+<dt id="put_callback-SUB-VALUE">put_callback( <i>SUB</i>, <i>VALUE</i> )</dt>
+<dd>
+
+</dd>
+<dt id="put_callback-SUB-VALUE-VALUE">put_callback( <i>SUB</i>, <i>VALUE</i>, <i>VALUE</i>, ... )</dt>
+<dd>
+
+<p><code>put_callback</code> is similar to the <code>put</code> method with the addition of the subroutine reference or name <i>SUB</i> which is called when the server reports that all actions resulting from the put have completed. For some applications this callback can be delayed by minutes, hours or possibly even longer. The data type is chosen the same way as for <code>put</code>. The arguments to the subroutine will be the channel object and the status value from the server, which is either <code>undef</code> or a printable string if an error occurred. The same restrictions apply to the callback subroutine as described in <code>get_callback</code> above.</p>
+
+</dd>
+<dt id="put_acks-SEVR">put_acks( <i>SEVR</i> )</dt>
+<dd>
+
+</dd>
+<dt id="put_acks-SEVR-SUB">put_acks( <i>SEVR</i>, <i>SUB</i> )</dt>
+<dd>
+
+<p>Applications that need to acknowledge alarms by doing a <code>ca_put()</code> with type <code>DBR_PUT_ACKS</code> can do so using the <code>put_acks</code> method. The severity argument may be provided as an integer from zero through three or as a string containing one of the corresponding EPICS severity names <code>NO_ALARM</code>, <code>MINOR</code>, <code>MAJOR</code> or <code>INVALID</code>. If a subroutine reference is provided it will be called after the operation has completed on the server as described in <code>put_callback</code> above.</p>
+
+</dd>
+<dt id="put_ackt-TRANS">put_ackt( <i>TRANS</i> )</dt>
+<dd>
+
+</dd>
+<dt id="put_ackt-TRANS-SUB">put_ackt( <i>TRANS</i>, <i>SUB</i> )</dt>
+<dd>
+
+<p>This method is for applications that need to enable/disable transient alarms by doing a <code>ca_put()</code> with type <code>DBR_PUT_ACKT</code>. The <code>TRANS</code> argument is a true/false value, and an optional subroutine reference can be provided as described above.</p>
+
+</dd>
+<dt id="change_connection_event-SUB">change_connection_event( <i>SUB</i> )</dt>
+<dd>
+
+<p>This method replaces, adds or cancels the connection handler subroutine for the channel; see the <code>new</code> constructor for details. If <i>SUB</i> is <code>undef</code> any existing handler is removed, otherwise the new subroutine will be used for all future connection events on this channel.</p>
+
+</dd>
+</dl>
+
+<h2 id="Channel-Data">Channel Data</h2>
+
+<p>The data provided to a callback function registered with either <code>get_callback</code> or <code>create_subscription</code> can be a scalar value or a reference to an array or a hash, depending on the data type that was used for the data transfer. If the request was for a single item of one of the basic data types, the data argument will be a Perl scalar that holds the value directly. If the request was for multiple items of one of the basic types, the data argument will be a reference to an array holding the data. There is one exception though; if the data type requested was for an array of <code>DBF_CHAR</code> values that array will be represented as a single Perl string containing all the characters before the first zero byte.</p>
+
+<p>If the request was for one of the compound data types, the data argument will be a reference to a hash with keys as described below. Keys that are not classed as metadata are named directly after the fields in the C <code>struct dbr_xxx_yyy</code>, and are only included when the C structure contains that particular field.</p>
+
+<h3 id="Metadata">Metadata</h3>
+
+<p>These metadata will always be present in the hash:</p>
+
+<dl>
+
+<dt id="TYPE">TYPE</dt>
+<dd>
+
+<p>The <code>DBR_xxx_yyy</code> name of the data type from the server. This might have been widened from the original type used to request or subscribe for the data.</p>
+
+</dd>
+<dt id="COUNT">COUNT</dt>
+<dd>
+
+<p>The number of elements in the data returned by the server. If the data type is <code>DBF_CHAR</code> the value given for <code>COUNT</code> is the number of bytes (including any trailing zeros) returned by the server, although the value field is given as a Perl string containing all the characters before the first zero byte.</p>
+
+</dd>
+</dl>
+
+<h3 id="Fixed-Fields">Fixed Fields</h3>
+
+<p>These fields are always present in the hash:</p>
+
+<dl>
+
+<dt id="value1">value</dt>
+<dd>
+
+<p>The actual process variable data, expressed as a Perl scalar or a reference to an array of scalars, depending on the request. An array of <code>DBF_CHAR</code> elements will be represented as a string; to access the array elements as numeric values the request must be for the <code>DBF_LONG</code> equivalent data type.</p>
+
+<p>If <i>TYPE</i> is <code>DBR_GR_ENUM</code> or <code>DBR_CTRL_ENUM</code>, <code>value</code> can be accessed both as the integer choice value and (if within range) as the string associated with that particular choice.</p>
+
+</dd>
+<dt id="status">status</dt>
+<dd>
+
+<p>The alarm status of the PV as a printable string, or <code>undef</code> if not in alarm.</p>
+
+</dd>
+<dt id="severity">severity</dt>
+<dd>
+
+<p>The alarm severity of the PV, or <code>undef</code> if not in alarm. A defined severity can be used as a human readable string or as a number giving the numeric value of the alarm severity (1 = <code>MINOR</code>, 2 = <code>MAJOR</code>, 3 = <code>INVALID</code>).</p>
+
+</dd>
+</dl>
+
+<h3 id="Ephemeral-Fields">Ephemeral Fields</h3>
+
+<p>These fields are only present for some values of <i>TYPE</i>:</p>
+
+<dl>
+
+<dt id="strs">strs</dt>
+<dd>
+
+<p>A reference to an array containing all the possible choice strings for an ENUM.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_GR_ENUM</code> or <code>DBR_CTRL_ENUM</code>.</p>
+
+</dd>
+<dt id="no_str">no_str</dt>
+<dd>
+
+<p>The number of choices defined for an ENUM.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_GR_ENUM</code> or <code>DBR_CTRL_ENUM</code>.</p>
+
+</dd>
+<dt id="stamp">stamp</dt>
+<dd>
+
+<p>The process variable timestamp, converted to a local <code>time_t</code>. This value is suitable for passing to the Perl <code>localtime</code> or <code>gmtime</code> functions.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_TIME_yyy</code>.</p>
+
+</dd>
+<dt id="stamp_fraction">stamp_fraction</dt>
+<dd>
+
+<p>The fractional part of the process variable timestamp as a positive floating point number less than 1.0.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_TIME_yyy</code>.</p>
+
+</dd>
+<dt id="ackt">ackt</dt>
+<dd>
+
+<p>The value of the process variable&#39;s transient acknowledgment flag, an integer.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_STSACK_STRING</code>.</p>
+
+</dd>
+<dt id="acks">acks</dt>
+<dd>
+
+<p>The alarm severity of the highest unacknowledged alarm for this process variable. As with the <code>severity</code> value, this scalar is both a string and numeric severity.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_STSACK_STRING</code>.</p>
+
+</dd>
+<dt id="precision">precision</dt>
+<dd>
+
+<p>The process variable&#39;s display precision, an integer giving the number of decimal places to display.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_GR_DOUBLE</code> or <code>DBR_CTRL_DOUBLE</code>.</p>
+
+</dd>
+<dt id="units">units</dt>
+<dd>
+
+<p>The engineering units string for the process variable.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_GR_yyy</code> or <code>DBR_CTRL_yyy</code> where <code>yyy</code> is not <code>STRING</code>.</p>
+
+</dd>
+<dt id="upper_disp_limit">upper_disp_limit</dt>
+<dd>
+
+</dd>
+<dt id="lower_disp_limit">lower_disp_limit</dt>
+<dd>
+
+<p>The display range for the process variable; graphical tools often provide a way to override these limits.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_GR_yyy</code> or <code>DBR_CTRL_yyy</code> where <code>yyy</code> is not <code>STRING</code>.</p>
+
+</dd>
+<dt id="upper_alarm_limit">upper_alarm_limit</dt>
+<dd>
+
+</dd>
+<dt id="upper_warning_limit">upper_warning_limit</dt>
+<dd>
+
+</dd>
+<dt id="lower_warning_limit">lower_warning_limit</dt>
+<dd>
+
+</dd>
+<dt id="lower_alarm_limit">lower_alarm_limit</dt>
+<dd>
+
+<p>These items give the values at which the process variable should go into an alarm state, although in practice the alarm severity associated with each level is not provided.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_GR_yyy</code> or <code>DBR_CTRL_yyy</code> where <code>yyy</code> is not <code>STRING</code>.</p>
+
+</dd>
+<dt id="upper_ctrl_limit">upper_ctrl_limit</dt>
+<dd>
+
+</dd>
+<dt id="lower_ctrl_limit">lower_ctrl_limit</dt>
+<dd>
+
+<p>The range over which a client can control the value of the process variable.</p>
+
+<p>Present only when <i>TYPE</i> is <code>DBR_CTRL_yyy</code> where <code>yyy</code> is not <code>STRING</code>.</p>
+
+</dd>
+</dl>
+
+<h2 id="Class-Methods">Class Methods</h2>
+
+<p>The following functions are not channel methods, and should be called using the class method syntax, e.g. <code>CA-&gt;pend_io(10)</code>.</p>
+
+<dl>
+
+<dt id="version">version</dt>
+<dd>
+
+<p>Returns the EPICS_VERSION_STRING from the version of EPICS Base this software was built using.</p>
+
+</dd>
+<dt id="flush_io">flush_io</dt>
+<dd>
+
+<p>Flush outstanding IO requests to the server. This routine is useful for users who need to flush requests prior to performing client side labor in parallel with labor performed in the server. Outstanding requests are also sent whenever the buffer which holds them becomes full. Note that the routine can return before all flush operations have completed.</p>
+
+</dd>
+<dt id="test_io">test_io</dt>
+<dd>
+
+<p>This function tests to see if all <code>get</code> requests are complete and channels created without a connection callback subroutine are connected. It will return a true value if all such operations are complete, otherwise false.</p>
+
+</dd>
+<dt id="pend_io-TIMEOUT">pend_io( <i>TIMEOUT</i> )</dt>
+<dd>
+
+<p>This function flushes the send buffer and then blocks until all outstanding <code>get</code> requests complete and all channels created without a connection callback subroutine have connected for the first time. Unlike <code>pend_event</code>, this routine does not process CA&#39;s background activities if no IO requests are pending.</p>
+
+<p>If any I/O or connection operations remain incomplete after <i>TIMEOUT</i> seconds, the function will die with the error <code>ECA_TIMEOUT</code>; see <a href="#ERROR-HANDLING">&quot;ERROR HANDLING&quot;</a> below. A <i>TIMEOUT</i> interval of zero is taken to mean wait forever if necessary. The <i>TIMEOUT</i> value should take into account worst case network delays such as Ethernet collision exponential back off until retransmission delays which can be quite long on overloaded networks.</p>
+
+</dd>
+<dt id="pend_event-TIMEOUT">pend_event( <i>TIMEOUT</i> )</dt>
+<dd>
+
+<p>Flush the send buffer and process CA&#39;s background activities for <i>TIMEOUT</i> seconds. This function always blocks for the full <i>TIMEOUT</i> period, and if a value of zero is used it will never return.</p>
+
+<p>It is generally advisable to replace any uses of Perl&#39;s built-in function <code>sleep</code> with calls to this routine, allowing Channel Access to make use of the delay time to perform any necessary housekeeping operations.</p>
+
+</dd>
+<dt id="poll">poll</dt>
+<dd>
+
+<p>Flush the send buffer and process any outstanding CA background activity.</p>
+
+</dd>
+<dt id="clear_subscription-SUBSCRIPTION">clear_subscription( <i>SUBSCRIPTION</i> )</dt>
+<dd>
+
+<p>Cancel a subscription. Note that for this to take effect immediately it is necessary to call <code>CA-&gt;flush_io</code> or one of the other class methods that flushes the send buffer.</p>
+
+</dd>
+<dt id="add_exception_event-SUB">add_exception_event( <i>SUB</i> )</dt>
+<dd>
+
+<p>Trap exception events and execute <i>SUB</i> whenever they occur. The subroutine is provided with four arguments: The channel object (if applicable), the status value from the server, a printable context string giving more information about the error, and a hash reference containing some additional data. If the exception is not specific to a particular channel the channel object will be <code>undef</code>. The status value is a printable string. The hash may contain any of the following members:</p>
+
+<ul>
+
+<li><p>OP</p>
+
+<p>The operation in progress when the exception occurred. This scalar when used as a string is one of <code>GET</code>, <code>PUT</code>, <code>CREATE_CHANNEL</code>, <code>ADD_EVENT</code>, <code>CLEAR_EVENT</code> or <code>OTHER</code> but can also be accessed as an integer (0-5).</p>
+
+</li>
+<li><p>TYPE</p>
+
+<p>The <code>DBR_xxx_yyy</code> name of the data type involved.</p>
+
+</li>
+<li><p>COUNT</p>
+
+<p>The number of elements in the request.</p>
+
+</li>
+<li><p>FILE</p>
+
+</li>
+<li><p>LINE</p>
+
+<p>These refer to the source file and line number inside the CA client library where the exception was noticed.</p>
+
+</li>
+</ul>
+
+</dd>
+<dt id="replace_printf_handler-SUB">replace_printf_handler( <i>SUB</i> )</dt>
+<dd>
+
+<p>This function provides a method to trap error messages from the CA client library and redirect them to somewhere other than the <code>STDERR</code> stream. The subroutine provided will be called with a single string argument every time the client library wishes to output an error or warning message. Note that a single error or warning message may result in several calls to this subroutine.</p>
+
+<p>To revert back to the original handler, call <code>CA-&gt;replace_printf_handler()</code> passing <code>undef</code> as the subroutine reference.</p>
+
+</dd>
+</dl>
+
+<h1 id="ERROR-HANDLING">ERROR HANDLING</h1>
+
+<p>Errors in using the library will be indicated by the module throwing an exception, i.e. calling <code>croak()</code> with an appropriate error message. These exceptions can be caught using the standard Perl <code>eval {}</code> statement and testing the <code>$@</code> variable afterwards; if not caught, they will cause the running program to <code>die</code> with an appropriate error message pointing to the program line that called the <code>CA</code> library.</p>
+
+<p>Error messages reported by the underlying CA client library all start with the string <code>ECA_</code> and the remainder of the symbol for the associated CA error number, and are followed after a space-hyphen-space by a human-readable message describing the error. Errors that are detected by the Perl interface layer do not follow this pattern, but are still printable strings.</p>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<dl>
+
+<dt id="R3.14-Channel-Access-Reference-Manual-by-Jeffrey-O.-Hill">[1] R3.14 Channel Access Reference Manual by Jeffrey O. Hill</dt>
+<dd>
+
+<p><a href="http://www.aps.anl.gov/epics/base/R3-14/12-docs/CAref.html">http://www.aps.anl.gov/epics/base/R3-14/12-docs/CAref.html</a></p>
+
+</dd>
+</dl>
+
+<h1 id="AUTHOR">AUTHOR</h1>
+
+<p>Andrew Johnson, &lt;anj@aps.anl.gov&gt;</p>
+
+<h1 id="COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</h1>
+
+<p>Copyright (C) 2008-2014 UChicago Argonne LLC, as Operator of Argonne National Laboratory.</p>
+
+<p>This software is distributed under the terms of the EPICS Open License.</p>
+
+
+</body>
+
+</html>
+
+

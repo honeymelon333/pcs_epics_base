@@ -1,0 +1,20 @@
+[symbol2]
+bbox 0 -16 64 16
+port 44 15 100 1792 p#0 symbol 1 0 0 0
+uniq 0
+[tools]
+p 0 -16 100 0 0 revision:2.2
+[attributes]
+[layers]
+<symbol>
+a 0 58 0 64 0 360
+v 0 64 -16
+64 -16
+_
+v 0 64 16
+64 16
+_
+v 0 0 0
+52 0
+_
+[comments]

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<database>
+
+<structure structureName = "digitalInputFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.basic.DigitalFactory</scalar>
+</structure>
+
+<structure structureName = "digitalOutputFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.basic.DigitalFactory</scalar>
+</structure>
+
+
+<structure structureName = "digitalState">
+  <scalar name = "name" scalarType = "string" />
+  <scalar name = "value" scalarType = "int" />
+  <structure name = "severity" extends = "alarmSeverity" />
+  <scalar name = "message" scalarType = "string" />
+</structure>
+
+<structure structureName = "digital">
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.genericFactory</auxInfo>
+  <scalar name = "value" scalarType = "int" />
+  <structure name = "input" scalarType = "generic"/>
+  <!-- each field of states must be as digitalState structure -->
+  <!-- supportName can be digitalInput or digitalOutput -->
+  <structure name = "states"  />
+</structure>
+
+</database>

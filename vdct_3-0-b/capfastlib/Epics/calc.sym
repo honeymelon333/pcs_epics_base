@@ -1,0 +1,111 @@
+[symbol2]
+bbox -32 -160 608 480
+port 575 -21 -100 1792 U3 symbol 2 608 -32 0
+port 575 43 -100 1792 U2 symbol 2 608 32 0
+port 575 107 -100 1792 U1 symbol 2 608 96 0
+port 575 171 -100 1792 U0 symbol 2 608 160 0
+port 6 -87 100 1792 SLNK symbol 1 -32 -96 0
+port 6 9 100 1792 INPF symbol 1 -32 0 0
+port 6 73 100 1792 INPE symbol 1 -32 64 0
+port 6 137 100 1792 INPD symbol 1 -32 128 0
+port 6 201 100 1792 INPC symbol 1 -32 192 0
+port 6 265 100 1792 INPB symbol 1 -32 256 0
+port 6 329 100 1792 INPA symbol 1 -32 320 0
+port 575 235 100 1792 VAL symbol 2 608 224 0
+port 580 368 100 1792 FLNK symbol 2 608 352 0
+uniq 11
+[tools]
+[attributes]
+p 272 446 100 0 0 primitive:calc
+p 96 318 100 0 1 SCAN:Passive
+p 96 286 100 0 1 PHAS:0
+p 96 254 100 0 1 EVNT:0
+p 264 421 100 0 -1 CALC:A+B+C
+p 96 254 100 0 0 def(INPA):0.000000
+p 96 255 100 0 0 typ(INPA):path
+p 96 222 100 0 0 def(INPB):0.000000
+p 96 223 100 0 0 typ(INPB):path
+p 96 190 100 0 0 def(INPC):0.000000
+p 96 191 100 0 0 typ(INPC):path
+p 96 158 100 0 0 def(INPD):0.000000
+p 96 159 100 0 0 typ(INPD):path
+p 96 126 100 0 0 def(INPE):0.000000
+p 96 127 100 0 0 typ(INPE):path
+p 96 94 100 0 0 def(INPF):0.000000
+p 96 95 100 0 0 typ(INPF):path
+p 96 222 100 0 1 PINA:NO
+p 96 190 100 0 1 PINB:NO
+p 96 158 100 0 1 PINC:NO
+p 96 126 100 0 1 PIND:NO
+p 96 94 100 0 1 PINE:NO
+p 96 62 100 0 1 PINF:NO
+p 352 318 100 0 1 HOPR:0.000000
+p 352 286 100 0 1 LOPR:0.000000
+p 352 254 100 0 1 HIHI:0.000000
+p 352 222 100 0 1 LOLO:0.000000
+p 352 190 100 0 1 HIGH:0.000000
+p 352 158 100 0 1 LOW:0.000000
+p 352 126 100 0 1 HHSV:NO ALARM
+p 352 94 100 0 1 HSV:NO ALARM
+p 352 62 100 0 1 LSV:NO ALARM
+p 352 30 100 0 1 LLSV:NO ALARM
+p 352 -2 100 0 1 HYST:0.000000
+p 352 -34 100 0 1 ADEL:0.000000
+p 352 -66 100 0 1 MDEL:0.000000
+p 161 -123 100 0 1 DESC:calculation record
+p 270 450 100 0 -1 Type:calc
+p 96 30 100 0 1 Node:nodename
+p 96 -2 100 0 1 EGU:units
+p 161 -187 100 0 0 def(FLNK):0.000000
+p 161 -186 100 0 0 typ(FLNK):path
+p 96 -34 100 0 1 PREC:0
+p 553 164 100 0 -1 username(U0):FLD0
+p 554 101 100 0 -1 username(U1):FLD1
+p 552 37 100 0 -1 username(U2):FLD2
+p 554 -26 100 0 -1 username(U3):FLD3
+[layers]
+<symbol>
+r 0 32 480 544 -160
+v 0 544 -32
+608 -32
+_
+v 0 544 32
+608 32
+_
+v 0 544 96
+608 96
+_
+v 0 544 160
+608 160
+_
+v 0 -32 -96
+32 -96
+_
+v 0 -32 0
+32 0
+_
+v 0 -32 64
+32 64
+_
+v 0 -32 128
+32 128
+_
+v 0 -32 192
+32 192
+_
+v 0 -32 256
+32 256
+_
+v 0 -32 320
+32 320
+_
+v 0 32 416
+544 416
+_
+v 0 544 224
+608 224
+_
+v 0 544 352
+608 352
+_
+[comments]

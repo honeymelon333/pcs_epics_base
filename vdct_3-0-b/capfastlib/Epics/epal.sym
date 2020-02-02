@@ -1,0 +1,258 @@
+[symbol2]
+bbox -32 -128 544 480
+port 12 367 -100 1792 U7 symbol 1 -32 352 0
+port 12 399 -100 1792 U6 symbol 1 -32 384 0
+port 12 431 -100 1792 U5 symbol 1 -32 416 0
+port 12 463 -100 1792 U4 symbol 1 -32 448 0
+port 511 363 -100 1792 U3 symbol 2 544 352 0
+port 511 395 -100 1792 U2 symbol 2 544 384 0
+port 511 427 -100 1792 U1 symbol 2 544 416 0
+port 511 459 -100 1792 U0 symbol 2 544 448 0
+port 6 -55 100 1792 SLNK symbol 1 -32 -64 0
+port 6 169 100 1792 INPF symbol 1 -32 160 0
+port 6 201 100 1792 INPE symbol 1 -32 192 0
+port 6 233 100 1792 INPD symbol 1 -32 224 0
+port 6 265 100 1792 INPC symbol 1 -32 256 0
+port 6 297 100 1792 INPB symbol 1 -32 288 0
+port 6 329 100 1792 INPA symbol 1 -32 320 0
+port 511 299 100 1792 VAL symbol 2 544 288 0
+port 512 330 100 1792 FLNK symbol 2 544 320 0
+port 6 137 100 1792 INPG symbol 1 -32 128 0
+port 6 105 100 1792 INPH symbol 1 -32 96 0
+port 6 73 100 1792 INPI symbol 1 -32 64 0
+port 6 41 100 1792 INPJ symbol 1 -32 32 0
+port 6 9 100 1792 INPK symbol 1 -32 0 0
+port 6 -23 100 1792 INPL symbol 1 -32 -32 0
+port 6 -87 100 1792 SDIS symbol 1 -32 -96 0
+port 511 267 100 1792 Q0 symbol 2 544 256 0
+port 511 235 100 1792 Q1 symbol 2 544 224 0
+port 511 203 100 1792 Q2 symbol 2 544 192 0
+port 511 171 100 1792 Q3 symbol 2 544 160 0
+port 511 139 100 1792 Q4 symbol 2 544 128 0
+port 511 107 100 1792 Q5 symbol 2 544 96 0
+port 511 75 100 1792 Q6 symbol 2 544 64 0
+port 511 43 100 1792 Q7 symbol 2 544 32 0
+port 511 11 100 1792 Q8 symbol 2 544 0 0
+port 511 -21 100 1792 Q9 symbol 2 544 -32 0
+port 511 -53 100 1792 QA symbol 2 544 -64 0
+port 511 -85 100 1792 QB symbol 2 544 -96 0
+uniq 33
+[tools]
+[attributes]
+p 272 446 100 0 0 primitive:pal
+p 320 318 100 0 1 SCAN:Passive
+p 320 286 100 0 1 PHAS:0
+p 320 254 100 0 1 EVNT:0
+p 247 425 100 1024 -1 JEDF:jedfile
+p 96 254 100 0 0 def(INPA):0.000000000000000e+00
+p 96 255 100 0 0 typ(INPA):path
+p 96 255 100 0 0 pproc(INPA):NPP
+p 96 255 100 0 0 palrm(INPA):NMS
+p 96 222 100 0 0 def(INPB):0.000000000000000e+00
+p 96 223 100 0 0 typ(INPB):path
+p 96 223 100 0 0 pproc(INPB):NPP
+p 96 223 100 0 0 palrm(INPB):NMS
+p 96 190 100 0 0 def(INPC):0.000000000000000e+00
+p 96 191 100 0 0 typ(INPC):path
+p 96 191 100 0 0 pproc(INPC):NPP
+p 96 191 100 0 0 palrm(INPC):NMS
+p 96 158 100 0 0 def(INPD):0.000000000000000e+00
+p 96 159 100 0 0 typ(INPD):path
+p 96 159 100 0 0 pproc(INPD):NPP
+p 96 159 100 0 0 palrm(INPD):NMS
+p 96 126 100 0 0 def(INPE):0.000000000000000e+00
+p 96 127 100 0 0 typ(INPE):path
+p 96 127 100 0 0 pproc(INPE):NPP
+p 96 127 100 0 0 palrm(INPE):NMS
+p 96 94 100 0 0 def(INPF):0.000000000000000e+00
+p 96 95 100 0 0 typ(INPF):path
+p 96 95 100 0 0 pproc(INPF):NPP
+p 96 95 100 0 0 palrm(INPF):NMS
+p 96 93 100 0 0 def(INPG):0.000000000000000e+00
+p 96 92 100 0 0 typ(INPG):path
+p 96 92 100 0 0 pproc(INPG):NPP
+p 96 92 100 0 0 palrm(INPG):NMS
+p 96 91 100 0 0 def(INPH):0.000000000000000e+00
+p 96 90 100 0 0 typ(INPH):path
+p 96 90 100 0 0 pproc(INPH):NPP
+p 96 90 100 0 0 palrm(INPH):NMS
+p 96 89 100 0 0 def(INPI):0.000000000000000e+00
+p 96 88 100 0 0 typ(INPI):path
+p 96 88 100 0 0 pproc(INPI):NPP
+p 96 88 100 0 0 palrm(INPI):NMS
+p 96 87 100 0 0 def(INPJ):0.000000000000000e+00
+p 96 86 100 0 0 typ(INPJ):path
+p 96 86 100 0 0 pproc(INPJ):NPP
+p 96 86 100 0 0 palrm(INPJ):NMS
+p 96 85 100 0 0 def(INPK):0.000000000000000e+00
+p 96 84 100 0 0 typ(INPK):path
+p 96 84 100 0 0 pproc(INPK):NPP
+p 96 84 100 0 0 palrm(INPK):NMS
+p 96 83 100 0 0 def(INPL):0.000000000000000e+00
+p 96 82 100 0 0 typ(INPL):path
+p 96 82 100 0 0 pproc(INPL):NPP
+p 96 82 100 0 0 palrm(INPL):NMS
+p 96 81 100 0 0 def(SDIS):0.000000000000000e+00
+p 96 80 100 0 0 typ(SDIS):path
+p 96 80 100 0 0 pproc(SDIS):NPP
+p 96 80 100 0 0 palrm(SDIS):NMS
+p 320 222 100 0 1 PINI:NO
+p 320 190 100 0 1 DISV:1
+p 320 158 100 0 1 DISS:NO_ALARM
+p 320 126 100 0 1 PRIO:LOW
+p 158 377 100 0 1 DESC:pal record
+p 234 458 100 0 -1 Type:pal
+p 320 94 100 0 1 EGU:state
+p 161 -187 100 0 0 def(FLNK):0.000000000000000e+00
+p 161 -186 100 0 0 typ(FLNK):path
+p 320 62 100 0 1 PREC:0
+p 490 454 100 0 -1 username(U0):FLD0
+p 490 422 100 0 -1 username(U1):FLD1
+p 490 389 100 0 -1 username(U2):FLD2
+p 489 357 100 0 -1 username(U3):FLD3
+p -15 451 100 0 -1 username(U4):FLD4
+p -15 420 100 0 -1 username(U5):FLD5
+p -15 387 100 0 -1 username(U6):FLD6
+p -16 356 100 0 -1 username(U7):FLD7
+p 64 322 100 0 1 A0:0.1
+p 192 318 100 0 1 A1:0.9
+p 64 290 100 0 1 B0:0.1
+p 192 286 100 0 1 B1:0.9
+p 64 258 100 0 1 C0:0.1
+p 192 254 100 0 1 C1:0.9
+p 64 222 100 0 1 D0:0.1
+p 192 222 100 0 1 D1:0.9
+p 64 190 100 0 1 E0:0.1
+p 192 190 100 0 1 E1:0.9
+p 64 158 100 0 1 F0:0.1
+p 192 158 100 0 1 F1:0.9
+p 64 126 100 0 1 G0:0.1
+p 192 126 100 0 1 G1:0.9
+p 64 94 100 0 1 H0:0.1
+p 192 94 100 0 1 H1:0.9
+p 64 62 100 0 1 I0:0.1
+p 192 62 100 0 1 I1:0.9
+p 64 30 100 0 1 J0:0.1
+p 192 30 100 0 1 J1:0.9
+p 64 -2 100 0 1 K0:0.1
+p 192 -2 100 0 1 K1:0.9
+p 64 -34 100 0 1 L0:0.1
+p 192 -34 100 0 1 L1:0.9
+[layers]
+<symbol>
+r 0 32 -128 480 480
+v 0 32 352
+480 352
+_
+v 0 32 416
+480 416
+_
+v 0 -32 352
+32 352
+_
+v 0 -32 384
+32 384
+_
+v 0 -32 416
+32 416
+_
+v 0 -32 448
+32 448
+_
+v 0 480 352
+544 352
+_
+v 0 480 384
+544 384
+_
+v 0 480 416
+544 416
+_
+v 0 480 448
+544 448
+_
+v 0 -32 -64
+32 -64
+_
+v 0 -32 160
+32 160
+_
+v 0 -32 192
+32 192
+_
+v 0 -32 224
+32 224
+_
+v 0 -32 256
+32 256
+_
+v 0 -32 288
+32 288
+_
+v 0 -32 320
+32 320
+_
+v 0 480 288
+544 288
+_
+v 0 480 320
+544 320
+_
+v 0 -32 128
+32 128
+_
+v 0 -32 96
+32 96
+_
+v 0 -32 64
+32 64
+_
+v 0 -32 32
+32 32
+_
+v 0 -32 0
+32 0
+_
+v 0 -32 -32
+32 -32
+_
+v 0 -32 -96
+32 -96
+_
+v 0 480 256
+544 256
+_
+v 0 480 224
+544 224
+_
+v 0 480 192
+544 192
+_
+v 0 480 160
+544 160
+_
+v 0 480 128
+544 128
+_
+v 0 480 96
+544 96
+_
+v 0 480 64
+544 64
+_
+v 0 480 32
+544 32
+_
+v 0 480 0
+544 0
+_
+v 0 480 -32
+544 -32
+_
+v 0 480 -64
+544 -64
+_
+v 0 480 -96
+544 -96
+_
+[comments]

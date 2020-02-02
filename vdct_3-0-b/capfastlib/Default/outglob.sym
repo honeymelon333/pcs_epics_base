@@ -1,0 +1,21 @@
+[symbol2]
+bbox 64 144 96 176
+port 62 166 -100 0 p symbol 2 80 160 0
+uniq 1
+[tools]
+[attributes]
+p 0 64 100 0 0 model:connector
+p 0 32 100 0 0 revision:2.1
+p 48 96 100 0 0 IO:output
+p 0 0 100 0 0 connectortype:global
+[layers]
+<symbol>
+a 0 80 160 72 160 360
+v 0 96 160
+80 176
+64 176
+64 144
+80 144
+96 160
+_
+[comments]

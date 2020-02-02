@@ -1,0 +1,51 @@
+[symbol2]
+bbox 112 192 432 320
+port 147 233 100 1792 SLNK symbol 1 112 224 0
+port 147 297 100 1792 INP symbol 1 112 288 0
+port 404 304 100 1792 FLNK symbol 2 432 288 0
+port 399 235 100 1792 VAL symbol 2 432 224 0
+uniq 8
+[tools]
+[attributes]
+p 144 190 100 0 0 primitive:compress
+p 96 318 100 0 0 SCAN:Passive
+p 96 286 100 0 0 PHAS:0
+p 96 254 100 0 0 EVNT:0
+p 96 222 100 0 0 PINP:NO
+p 247 427 100 0 0 TYPE:cardType
+p 96 190 100 0 0 ALG:N to 1 Average
+p 96 158 100 0 0 NSAM:0
+p 96 126 100 0 0 N:0
+p 352 318 100 0 0 OFF:0
+p 352 286 100 0 0 IHIL:0
+p 352 254 100 0 0 ILIL:0
+p 352 222 100 0 0 PREC:0
+p 352 190 100 0 0 HOPR:0.000000
+p 352 158 100 0 0 LOPR:0.000000
+p 352 126 100 0 0 MCNT:0
+p 160 30 100 0 0 DESC:compression record
+p 224 206 100 0 -1 Type:compress
+p 96 94 100 0 0 Node:nodename
+p 161 -187 100 0 0 def(FLNK):0.000000
+p 161 -186 100 0 0 typ(FLNK):path
+p 161 -219 100 0 0 typ(INP):path
+p 161 -251 100 0 0 def(INP):0.000000
+[layers]
+<symbol>
+a 0 224 256 224 288 360
+a 0 288 256 272 272 360
+a 0 335 255 323 263 360
+r 0 176 192 368 320
+v 0 112 224
+176 224
+_
+v 0 112 288
+176 288
+_
+v 0 368 288
+432 288
+_
+v 0 368 224
+432 224
+_
+[comments]

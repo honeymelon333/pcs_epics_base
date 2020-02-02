@@ -1,0 +1,71 @@
+[symbol2]
+bbox 0 0 576 480
+port 546 41 -100 1792 U3 symbol 2 576 32 0
+port 546 105 -100 1792 U2 symbol 2 576 96 0
+port 546 169 -100 1792 U1 symbol 2 576 160 0
+port 546 233 -100 1792 U0 symbol 2 576 224 0
+port 546 297 100 1792 VAL symbol 2 576 288 0
+port 546 361 100 1792 FLNK symbol 2 576 352 0
+port 36 266 100 1792 INP symbol 1 0 256 0
+port 36 74 100 1792 SLNK symbol 1 0 64 0
+uniq 13
+[tools]
+[attributes]
+p 144 190 100 0 0 primitive:compress
+p 96 318 100 0 1 SCAN:Passive
+p 96 286 100 0 1 PHAS:0
+p 96 254 100 0 1 EVNT:0
+p 96 222 100 0 1 PINP:NO
+p 247 427 100 0 -1 TYPE:cardType
+p 96 190 100 0 1 ALG:N to 1 Average
+p 96 158 100 0 1 NSAM:0
+p 96 126 100 0 1 N:0
+p 352 318 100 0 1 OFF:0
+p 352 286 100 0 1 IHIL:0
+p 352 254 100 0 1 ILIL:0
+p 352 222 100 0 1 PREC:0
+p 352 190 100 0 1 HOPR:0.000000
+p 352 158 100 0 1 LOPR:0.000000
+p 352 126 100 0 1 MCNT:0
+p 160 30 100 0 1 DESC:compression record
+p 248 455 100 0 -1 Type:compress
+p 96 94 100 0 1 Node:nodename
+p 161 -187 100 0 0 def(FLNK):0.000000
+p 161 -186 100 0 0 typ(FLNK):path
+p 161 -219 100 0 0 typ(INP):path
+p 161 -251 100 0 0 def(INP):0.000000
+p 521 228 100 0 -1 username(U0):FLD0
+p 521 164 100 0 -1 username(U1):FLD1
+p 520 101 100 0 -1 username(U2):FLD2
+p 520 37 100 0 -1 username(U3):FLD3
+[layers]
+<symbol>
+r 0 64 0 512 480
+v 0 512 32
+576 32
+_
+v 0 512 96
+576 96
+_
+v 0 512 160
+576 160
+_
+v 0 512 224
+576 224
+_
+v 0 512 288
+576 288
+_
+v 0 512 352
+576 352
+_
+v 0 0 256
+64 256
+_
+v 0 64 416
+512 416
+_
+v 0 0 64
+64 64
+_
+[comments]

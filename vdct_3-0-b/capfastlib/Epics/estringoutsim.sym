@@ -1,0 +1,108 @@
+[symbol2]
+bbox 128 192 384 448
+port 350 298 -100 1792 U3 symbol 2 384 288 0
+port 350 362 100 1792 OUT symbol 2 384 352 0
+port 347 330 -100 1792 U2 symbol 2 384 320 0
+port 166 234 100 1792 SDIS symbol 1 128 224 0
+port 168 266 100 1792 SIML symbol 1 128 256 0
+port 166 330 -100 1792 U1 symbol 1 128 320 0
+port 168 298 100 1792 SIOL symbol 1 128 288 0
+port 168 362 -100 1792 U0 symbol 1 128 352 0
+port 166 426 100 1792 DOL symbol 1 128 416 0
+port 350 426 100 1792 FLNK symbol 2 384 416 0
+port 347 394 100 1792 VAL symbol 2 384 384 0
+port 168 394 100 1792 SLNK symbol 1 128 384 0
+uniq 15
+[tools]
+[attributes]
+p 208 446 100 0 0 primitive:estringout
+p 64 334 100 0 0 SCAN:Passive
+p 64 302 100 0 0 PHAS:0
+p 64 270 100 0 0 EVNT:0
+p 205 488 100 0 0 DTYP:Soft Channel
+p 64 238 100 0 0 PINI:NO
+p 64 206 100 0 0 OMSL:supervisory
+p 64 366 100 0 0 VAL:string
+p 64 174 100 0 0 IVOA:Continue normally
+p 64 142 100 0 0 IVOV:
+p 206 318 100 0 -1 Type:stringout
+p 288 238 100 0 0 DISV:1
+p 288 302 100 0 0 DISS:NO_ALARM
+p 288 270 100 0 0 PRIO:LOW
+p 64 46 100 0 0 SIMS:NO_ALARM
+p 155 440 100 0 0 DESC:string output record
+p 92 -78 100 0 0 def(FLNK):0.000000000000000e+00
+p 96 -100 100 0 0 typ(FLNK):path
+p 96 -132 100 0 0 typ(DOL):path
+p 96 -164 100 0 0 def(DOL):0.000000000000000e+00
+p 96 -164 100 0 0 pproc(DOL):NPP
+p 96 -164 100 0 0 palrm(DOL):NMS
+p 96 -165 100 0 0 typ(OUT):val
+p 96 -166 100 0 0 def(OUT):0.000000000000000e+00
+p 96 -198 100 0 0 def(SDIS):0.000000000000000e+00
+p 96 -240 100 0 0 typ(SDIS):path
+p 96 -240 100 0 0 pproc(SDIS):NPP
+p 96 -240 100 0 0 palrm(SDIS):NMS
+p 144 356 100 0 -1 username(U0):FLD0
+p 96 -304 100 0 0 typ(U0):val
+p 144 326 100 0 -1 username(U1):FLD1
+p 96 -368 100 0 0 typ(U1):val
+p 330 324 100 0 -1 username(U2):FLD2
+p 96 -432 100 0 0 typ(U2):val
+p 330 292 100 0 -1 username(U3):FLD3
+p 96 -496 100 0 0 typ(U3):val
+p 96 -528 100 0 0 pproc(SIML):NPP
+p 96 -560 100 0 0 palrm(SIML):NMS
+p 96 -592 100 0 0 def(SIML):0.000000000000000e+00
+p 96 -624 100 0 0 typ(SIML):path
+p 96 -656 100 0 0 pproc(SIOL):NPP
+p 96 -688 100 0 0 palrm(SIOL):NMS
+p 96 -720 100 0 0 def(SIOL):0.000000000000000e+00
+p 96 -752 100 0 0 typ(SIOL):path
+[layers]
+<symbol>
+v 0 192 448
+192 192
+288 192
+320 224
+320 416
+288 448
+192 448
+_
+v 0 320 288
+384 288
+_
+v 0 320 352
+384 352
+_
+v 0 320 320
+384 320
+_
+v 0 128 224
+192 224
+_
+v 0 128 256
+192 256
+_
+v 0 128 320
+192 320
+_
+v 0 128 288
+192 288
+_
+v 0 128 352
+192 352
+_
+v 0 128 416
+192 416
+_
+v 0 320 416
+384 416
+_
+v 0 320 384
+384 384
+_
+v 0 128 384
+192 384
+_
+[comments]

@@ -1,0 +1,10 @@
+#Defaults
+#Wed Jul 01 00:18:52 CEST 2009
+borderalarm=-16777063
+customizedTypes=generic, alarm
+backgroundalarm=-3342388
+foregroundalarm=-6750208
+staticIncludes=example/pvdata/include/structures.xml
+foregroundgeneric=-16777012
+backgroundgeneric=-13108
+bordergeneric=-16751002

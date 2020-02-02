@@ -1,0 +1,51 @@
+[symbol2]
+bbox 160 224 416 320
+port 386 265 100 1792 VAL symbol 2 416 256 0
+port 386 297 100 1792 FLNK symbol 2 416 288 0
+port 196 298 100 1792 SLNK symbol 1 160 288 0
+port 196 266 100 1792 SDIS symbol 1 160 256 0
+uniq 14
+[tools]
+[attributes]
+p 144 190 100 0 0 primitive:eperm
+p 128 286 100 0 0 SCAN:Passive
+p 128 254 100 0 0 PHAS:0
+p 128 222 100 0 0 EVNT:0
+p 128 190 100 0 0 PINI:NO
+p 128 158 100 0 0 LABL:label
+p 128 126 100 0 0 DISV:1
+p 128 94 100 0 0 DISS:NO_ALARM
+p 79 362 100 0 0 DESC:permissive record
+p 233 269 100 0 -1 Type:permissive
+p 128 62 100 0 0 PRIO:LOW
+p 161 -187 100 0 0 def(FLNK):0.000000000000000e+00
+p 161 -186 100 0 0 typ(FLNK):path
+p 161 -283 100 0 0 def(SDIS):0.000000000000000e+00
+p 161 -315 100 0 0 typ(SDIS):path
+p 161 -315 100 0 0 pproc(SDIS):NPP
+p 161 -315 100 0 0 palrm(SDIS):NMS
+[layers]
+<symbol>
+v 0 224 288
+256 320
+320 320
+352 288
+352 256
+320 224
+256 224
+224 256
+224 288
+_
+v 0 352 256
+416 256
+_
+v 0 352 288
+416 288
+_
+v 0 160 288
+224 288
+_
+v 0 160 256
+224 256
+_
+[comments]

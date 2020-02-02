@@ -1,0 +1,26 @@
+[symbol2]
+bbox 0 0 3200 320
+uniq 0
+[tools]
+[attributes]
+p 0 -32 100 0 0 revision:2.2
+p 0 0 100 0 0 model:null
+[layers]
+<symbol>
+v 0 0 320
+0 0
+3200 0
+_
+v 0 0 160
+3198 160
+_
+v 0 242 0
+242 160
+_
+v 0 1994 0
+1994 160
+_
+v 0 2556 0
+2556 160
+_
+[comments]

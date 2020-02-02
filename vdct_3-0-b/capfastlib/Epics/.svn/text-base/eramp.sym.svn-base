@@ -1,0 +1,166 @@
+[symbol2]
+bbox -128 -416 608 416
+port -90 -55 100 1792 LRL symbol 1 -128 -64 0
+port 575 203 100 1792 OUTL symbol 2 608 192 0
+port -90 -215 100 1792 SDIS symbol 1 -128 -224 0
+port 576 266 100 1792 FLNK symbol 2 608 256 0
+port 575 235 100 1792 OVAL symbol 2 608 224 0
+port -90 9 100 1792 CVL symbol 1 -128 0 0
+port -90 -23 100 1792 STPL symbol 1 -128 -32 0
+port -90 -183 100 1792 SLNK symbol 1 -128 -192 0
+port 575 139 -100 1792 U0 symbol 2 608 128 0
+port 575 107 -100 1792 U1 symbol 2 608 96 0
+port 575 75 -100 1792 U2 symbol 2 608 64 0
+port 575 43 -100 1792 U3 symbol 2 608 32 0
+port -84 175 -100 1792 U4 symbol 1 -128 160 0
+port -84 143 -100 1792 U5 symbol 1 -128 128 0
+port -84 111 -100 1792 U6 symbol 1 -128 96 0
+port -84 79 -100 1792 U7 symbol 1 -128 64 0
+port -90 -87 100 1792 PDNL symbol 1 -128 -96 0
+port 575 171 100 1792 OZR symbol 2 608 160 0
+uniq 36
+[tools]
+[attributes]
+p 236 377 100 0 0 primitive:ramp
+p -32 254 100 0 1 SCAN:Passive
+p -32 222 100 0 1 PHAS:0
+p -32 190 100 0 1 EVNT:0
+p 96 254 100 0 0 def(CVL):0.000000000000000e+00
+p 96 255 100 0 0 typ(CVL):path
+p 96 255 100 0 0 pproc(CVL):NPP
+p 96 255 100 0 0 palrm(CVL):NMS
+p 96 254 100 0 0 def(LRL):0.000000000000000e+00
+p 96 255 100 0 0 typ(LRL):path
+p 96 255 100 0 0 pproc(LRL):NPP
+p 96 255 100 0 0 palrm(LRL):NMS
+p 96 222 100 0 0 def(STPL):0.000000000000000e+00
+p 96 223 100 0 0 typ(STPL):path
+p 96 223 100 0 0 pproc(STPL):NPP
+p 96 223 100 0 0 palrm(STPL):NMS
+p 96 81 100 0 0 def(SDIS):0.000000000000000e+00
+p 96 80 100 0 0 typ(SDIS):path
+p 96 80 100 0 0 pproc(SDIS):NPP
+p 96 80 100 0 0 palrm(SDIS):NMS
+p -32 158 100 0 1 PINI:NO
+p 256 -2 100 0 1 DISV:1
+p 256 -34 100 0 1 DISS:NO_ALARM
+p -32 126 100 0 1 PRIO:LOW
+p 160 311 100 0 1 DESC:ramp record
+p 185 376 200 0 -1 Type:ramp
+p -32 94 100 0 1 EGU:Amps
+p 161 -187 100 0 0 def(FLNK):0.000000000000000e+00
+p 161 -186 100 0 0 typ(FLNK):path
+p -32 62 100 0 1 PREC:0
+p 554 132 100 0 -1 username(U0):FLD0
+p 554 100 100 0 -1 username(U1):FLD1
+p 554 67 100 0 -1 username(U2):FLD2
+p 553 35 100 0 -1 username(U3):FLD3
+p -114 164 100 0 -1 username(U4):FLD4
+p -114 133 100 0 -1 username(U5):FLD5
+p -114 100 100 0 -1 username(U6):FLD6
+p -115 69 100 0 -1 username(U7):FLD7
+p -32 -2 100 0 1 IALG:Bumpless
+p 256 -386 100 0 1 IRBA:Continue normally
+p -32 -194 100 0 1 OROC:0.0
+p 256 -194 100 0 1 IVOV:0.0
+p -32 -226 100 0 1 RACT:NO
+p -32 -258 100 0 1 HOPR:0.0
+p -32 -162 100 0 1 SMSL:supervisory
+p -32 -290 100 0 1 LOPR:0.0
+p 256 -226 100 0 1 HLIM:0.0
+p 256 254 100 0 1 HIHI:0.0
+p 256 -258 100 0 1 LLIM:0.0
+p 256 222 100 0 1 LOLO:0.0
+p -32 30 100 0 1 DBND:0.0
+p 256 190 100 0 1 HIGH:0.0
+p -32 -34 100 0 1 RALG:Direct
+p 256 158 100 0 1 LOW:0.0
+p -32 -66 100 0 1 APPR:Above
+p 256 126 100 0 1 HHSV:NO_ALARM
+p -32 -98 100 0 1 OVER:0.0
+p 256 94 100 0 1 LLSV:NO_ALARM
+p -32 -130 100 0 1 CCNT:0.0
+p 256 62 100 0 1 HSV:NO_ALARM
+p 256 30 100 0 1 LSV:NO_ALARM
+p 256 -98 100 0 1 HYST:0.0
+p 256 -130 100 0 1 ADEL:0.0
+p 256 -66 100 0 1 MDEL:0.0
+p 161 -219 100 0 0 typ(OUTL):path
+p 161 -251 100 0 0 def(OUTL):0.000000000000000e+00
+p 161 -283 100 0 0 palrm(OUTL):NMS
+p 161 -315 100 0 0 pproc(OUTL):NPP
+p 256 -290 100 0 1 BRCT:0
+p -32 -322 100 0 1 SDLY:0
+p 256 -322 100 0 1 IOCV:0
+p 256 -354 100 0 1 IFST:0
+p 256 -386 100 0 0 typ(PDNL):path
+p 256 -418 100 0 0 def(PDNL):0.000000000000000e+00
+p 256 -450 100 0 0 palrm(PDNL):NMS
+p 256 -482 100 0 0 pproc(PDNL):NPP
+p -32 -354 100 0 1 RMOD:Closed Loop
+p 256 -162 100 0 1 MDLT:0
+p -32 -386 100 0 1 PDNV:1
+[layers]
+<symbol>
+r 0 -64 -416 544 416
+v 0 -64 288
+544 288
+_
+v 0 -64 352
+544 352
+_
+v 0 -128 -64
+-64 -64
+_
+v 0 544 192
+608 192
+_
+v 0 -128 -224
+-64 -224
+_
+v 0 544 256
+608 256
+_
+v 0 544 224
+608 224
+_
+v 0 -128 0
+-64 0
+_
+v 0 -128 -32
+-64 -32
+_
+v 0 -128 -192
+-64 -192
+_
+v 0 544 128
+608 128
+_
+v 0 544 96
+608 96
+_
+v 0 544 64
+608 64
+_
+v 0 544 32
+608 32
+_
+v 0 -128 160
+-64 160
+_
+v 0 -128 128
+-64 128
+_
+v 0 -128 96
+-64 96
+_
+v 0 -128 64
+-64 64
+_
+v 0 -128 -96
+-64 -96
+_
+v 0 544 160
+608 160
+_
+[comments]

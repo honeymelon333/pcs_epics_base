@@ -1,0 +1,28 @@
+[symbol2]
+bbox 112 64 144 128
+port 128 136 -100 0 GND symbol 3 128 128 0
+uniq 0
+[tools]
+[attributes]
+p 64 32 100 0 0 connectortype:global
+p 64 64 100 0 0 model:connector
+p 64 0 100 0 0 revision:2.2
+p 64 128 100 0 0 id:GND1
+[layers]
+<symbol>
+v 0 112 96
+144 96
+128 64
+112 96
+_
+v 0 126 76
+130 76
+_
+v 0 126 90
+128 92
+128 76
+_
+v 0 128 128
+128 96
+_
+[comments]

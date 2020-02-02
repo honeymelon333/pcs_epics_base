@@ -1,0 +1,80 @@
+[symbol2]
+bbox -32 -96 608 480
+port 3 -23 100 1792 SLNK symbol 1 -32 -32 0
+port 3 169 100 1792 TORG symbol 1 -32 160 0
+port 580 368 100 1792 FLNK symbol 2 608 352 0
+port 575 235 100 1792 OUT symbol 2 608 224 0
+port 575 171 -100 1792 U0 symbol 2 608 160 0
+port 575 107 -100 1792 U1 symbol 2 608 96 0
+port 575 43 -100 1792 U2 symbol 2 608 32 0
+port 575 -21 -100 1792 U3 symbol 2 608 -32 0
+uniq 12
+[tools]
+[attributes]
+p 272 446 100 0 0 primitive:timer
+p 96 318 100 0 1 SCAN:Passive
+p 96 286 100 0 1 PHAS:0
+p 96 254 100 0 1 EVNT:0
+p 96 222 100 0 1 PTOR:NO
+p 247 427 100 0 -1 TYPE:cardType
+p 96 190 100 0 1 MAIN:NO
+p 96 158 100 0 1 TSRC:external
+p 96 126 100 0 1 PTST:high
+p 96 62 100 0 1 TEVT:0
+p 96 30 100 0 1 PREC:0
+p 96 -2 100 0 1 TIMU:microseconds
+p 320 318 100 0 1 PDLY:0.000000
+p 320 286 100 0 1 DUT1:0.000000
+p 320 254 100 0 1 OPW1:0.000000
+p 320 222 100 0 1 DUT2:0.000000
+p 320 190 100 0 1 OPW2:0.000000
+p 320 158 100 0 1 DUT3:0.000000
+p 320 126 100 0 1 OPW3:0.000000
+p 320 94 100 0 1 DUT4:0.000000
+p 320 62 100 0 1 OPW4:0.000000
+p 320 30 100 0 1 DUT5:0.000000
+p 320 -2 100 0 1 OPW5:0.000000
+p 160 -66 100 0 1 DESC:timer record
+p 270 450 100 0 -1 Type:timer
+p 96 94 100 0 1 Node:nodename
+p 161 -187 100 0 0 def(FLNK):0.000000
+p 161 -186 100 0 0 typ(FLNK):path
+p 161 -185 100 0 0 def(OUT):#C0 S0
+p 161 -184 100 0 0 typ(OUT):val
+p 161 -219 100 0 0 typ(TORG):path
+p 161 -251 100 0 0 def(TORG):0.000000
+p 553 166 100 0 -1 username(U0):FLD0
+p 553 102 100 0 -1 username(U1):FLD1
+p 553 38 100 0 -1 username(U2):FLD2
+p 552 -26 100 0 -1 username(U3):FLD3
+[layers]
+<symbol>
+r 0 32 -96 544 480
+v 0 -32 -32
+32 -32
+_
+v 0 -32 160
+32 160
+_
+v 0 544 352
+608 352
+_
+v 0 544 224
+608 224
+_
+v 0 32 416
+544 416
+_
+v 0 544 160
+608 160
+_
+v 0 544 96
+608 96
+_
+v 0 544 32
+608 32
+_
+v 0 544 -32
+608 -32
+_
+[comments]

@@ -1,0 +1,10 @@
+# Example substitutions file
+
+file "db/dbExample1.db" {
+    { Heater = "hanlf",TMP_FB="hanlf:tempFeedBK",ALRM_TMP_FB="hanlf:alarmTempFeedBK",PW_OUT="hanlf:powerOut" ,CTRL_OUT="hanlf:controlOut"}
+}
+
+file "db/dbExample2.db" {
+    { Heater = "hanlf",TMP_FB="hanlf:tempFeedbk",ALRM_TMP_FB="hanlf:alarmTempFeedBK",PW_OUT="hanlf:powerOut",CTRL_OUT="hanlf:controlOut" }
+}
+

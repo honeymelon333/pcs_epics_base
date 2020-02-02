@@ -1,0 +1,37 @@
+#Defaults
+#Sat Feb 01 22:32:32 CST 2020
+customizedTypes=ai, bo, bi, epid, calc
+foregroundepid=-16777216
+backgroundcalc=-1
+borderbo=-16777216
+foregroundbo=-16777216
+backgroundbo=-1
+borderbi=-16777216
+foregroundbi=-16777216
+borderepid=-16777216
+backgroundbi=-1
+displayArrowDBF_INLINK=true
+dbdFiles=/usr/local/epics/apps/Ftest/dbd/example.dbd
+displayArrowDBF_FWDLINK=true
+dashSizeDBF_INLINK=5
+lineWidthDBF_FWDLINK=2.0
+lineWidthDBF_OUTLINK=1.0
+colorDBF_OUTLINK=-10066432
+colorDBF_INLINK=-10092442
+foregroundcalc=-16777216
+backgroundepid=-1
+bordercalc=-16777216
+loggingLevel=INFO
+lineWidthDBF_INLINK=1.0
+isDashedDBF_FWDLINK=true
+isDashedDBF_INLINK=false
+colorDBF_FWDLINK=-26368
+isDashedDBF_OUTLINK=true
+borderai=-16777216
+foregroundai=-16777216
+symbolPaths=capfastlib/Epics
+dashSizeDBF_FWDLINK=5
+displayArrowDBF_OUTLINK=true
+dashSizeDBF_OUTLINK=5
+backgroundai=-1
+customizedEdgeTypes=DBF_FWDLINK, DBF_INLINK, DBF_OUTLINK

@@ -1,0 +1,35 @@
+#  CONFIG.win32-x86-mingw.win32-x86-mingw
+#
+# Revision-Id: anj@aps.anl.gov-20150224203042-6z73a9n1sd5iw4b5
+#
+# Definitions for win32-x86-mingw host - win32-x86-mingw target builds
+# Sites may override these definitions in CONFIG_SITE.win32-x86-mingw.win32-x86-mingw
+#-------------------------------------------------------
+
+# Include common gnu compiler definitions
+include $(CONFIG)/CONFIG.gnuCommon
+
+# Undo various things set by CONFIG.gnuCommon
+
+CMPLR_PREFIX =
+
+# Remove $(GNU_BIN)/ path
+CC  = $(CMPLR_PREFIX)gcc
+CCC = $(CMPLR_PREFIX)g++
+AR  = $(CMPLR_PREFIX)ar -rc
+LD  = $(CMPLR_PREFIX)ld -r
+RANLIB = $(CMPLR_PREFIX)ranlib
+
+# Add resource compiler
+RCCMD = $(CMPLR_PREFIX)windres $(INCLUDES) $< $@
+
+# Remove -fPIC flags, add out-implib
+SHRLIB_CFLAGS =
+SHRLIB_LDFLAGS = -shared -Wl,--out-implib,$(LIB_PREFIX)$*$(LIB_SUFFIX)
+LOADABLE_SHRLIB_LDFLAGS = -shared -Wl,--out-implib,$(LIB_PREFIX)$*$(LIB_SUFFIX)
+
+# Don't link with gcc library
+GNU_LDLIBS_YES =
+
+# Link with winsock2
+OP_SYS_LDLIBS = -lws2_32

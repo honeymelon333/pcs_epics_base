@@ -1,0 +1,24 @@
+[symbol2]
+bbox 96 144 256 176
+port 78 166 -100 0 p symbol 0 96 160 0
+uniq 2
+[tools]
+[attributes]
+p 128 64 50 0 0 IO:*opt*
+p 128 96 50 0 0 connectortype:offpage
+p 96 32 100 0 0 revision:2.2
+p 128 128 50 0 0 model:connector
+[layers]
+<symbol>
+v 0 96 160
+128 160
+_
+v 0 128 160
+144 172
+240 172
+256 160
+240 148
+144 148
+128 160
+_
+[comments]

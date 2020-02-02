@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<database>
+
+<structure structureName = "supportState" >
+  <auxInfo name = "pvReplaceFactory" scalarType = "string">org.epics.pvData.enumeratedFactory</auxInfo>
+  <scalar name = "index" scalarType = "int" />
+  <scalar name = "choice" scalarType = "string" />
+  <array name = "choices" scalarType = "string">
+    readyForInitialize,readyForStart,ready,zombie</array>
+</structure>
+
+</database>

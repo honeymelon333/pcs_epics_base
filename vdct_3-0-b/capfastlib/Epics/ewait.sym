@@ -1,0 +1,154 @@
+[symbol2]
+bbox -32 -128 672 480
+port 644 176 100 1792 OUTN symbol 2 672 160 0
+port 6 -87 100 1792 SDIS symbol 1 -32 -96 0
+port 6 -23 100 1792 INLN symbol 1 -32 -32 0
+port 6 9 100 1792 INKN symbol 1 -32 0 0
+port 6 41 100 1792 INJN symbol 1 -32 32 0
+port 6 73 100 1792 ININ symbol 1 -32 64 0
+port 6 105 100 1792 INHN symbol 1 -32 96 0
+port 6 137 100 1792 INGN symbol 1 -32 128 0
+port 644 -48 100 1792 FLNK symbol 2 672 -64 0
+port 639 235 100 1792 VAL symbol 2 672 224 0
+port 6 329 100 1792 INAN symbol 1 -32 320 0
+port 6 297 100 1792 INBN symbol 1 -32 288 0
+port 6 265 100 1792 INCN symbol 1 -32 256 0
+port 6 233 100 1792 INDN symbol 1 -32 224 0
+port 6 201 100 1792 INEN symbol 1 -32 192 0
+port 6 169 100 1792 INFN symbol 1 -32 160 0
+port 6 -55 100 1792 SLNK symbol 1 -32 -64 0
+port 12 367 -100 1792 U7 symbol 1 -32 352 0
+uniq 22
+[tools]
+[attributes]
+p 96 -34 100 0 1 ADEL:0.000000000000000e+00
+p 291 424 100 0 -1 CALC:A+B+C
+p 177 374 100 0 1 DESC:wait record
+p 96 158 100 0 1 DISS:NO_ALARM
+p 96 190 100 0 1 DISV:1
+p 501 -527 100 0 0 DOLD:0
+p 32 -256 100 0 0 DOPT:Use VAL
+p 96 254 100 0 1 EVNT:0
+p 352 318 100 0 1 HOPR:0.0000000e+00
+p 352 224 100 0 1 INAP:No
+p 352 192 100 0 1 INBP:No
+p 352 160 100 0 1 INCP:No
+p 352 128 100 0 0 INDP:No
+p 261 -287 100 0 0 INEP:No
+p 281 -307 100 0 0 INFP:No
+p 301 -327 100 0 0 INGP:No
+p 336 -192 100 0 0 INHP:No
+p 341 -367 100 0 0 INIP:No
+p 361 -387 100 0 0 INJP:No
+p 381 -407 100 0 0 INKP:No
+p 401 -427 100 0 0 INLP:No
+p 352 286 100 0 1 LOPR:0.0000000e+00
+p 96 -66 100 0 1 MDEL:0.000000000000000e+00
+p 461 -487 100 0 0 ODLY:0
+p 96 0 100 0 1 OOPT:Every Time
+p 96 286 100 0 1 PHAS:0
+p 96 222 100 0 1 PINI:NO
+p 96 62 100 0 1 PREC:0
+p 96 126 100 0 1 PRIO:LOW
+p 96 318 100 0 1 SCAN:Passive
+p 601 -627 100 0 0 SIML:0.000000000000000e+00
+p 581 -607 100 0 0 SIMM:NO
+p 641 -667 100 0 0 SIMS:NO_ALARM
+p 621 -647 100 0 0 SIOL:0.000000000000000e+00
+p 297 453 100 0 -1 Type:wait
+p 161 -187 100 0 0 def(FLNK):0.000000000000000e+00
+p 96 254 100 0 0 def(INAN): 
+p 96 222 100 0 0 def(INBN): 
+p 96 190 100 0 0 def(INCN): 
+p 96 158 100 0 0 def(INDN): 
+p 96 126 100 0 0 def(INEN): 
+p 96 94 100 0 0 def(INFN): 
+p 96 93 100 0 0 def(INGN): 
+p 96 91 100 0 0 def(INHN): 
+p 96 89 100 0 0 def(ININ): 
+p 96 87 100 0 0 def(INJN): 
+p 96 85 100 0 0 def(INKN): 
+p 96 83 100 0 0 def(INLN): 
+p 561 -587 100 0 0 def(OUTN): 
+p 96 81 100 0 0 def(SDIS): 0.000000000000000e+00
+p 521 -547 100 0 0 pproc(SDIS): NPP
+p 272 446 100 0 0 primitive:ewait
+p 161 -186 100 0 0 typ(FLNK):path
+p 96 255 100 0 0 typ(INAN):path
+p 96 223 100 0 0 typ(INBN):path
+p 96 191 100 0 0 typ(INCN):path
+p 96 159 100 0 0 typ(INDN):path
+p 96 127 100 0 0 typ(INEN):path
+p 96 95 100 0 0 typ(INFN):path
+p 96 92 100 0 0 typ(INGN):path
+p 96 90 100 0 0 typ(INHN):path
+p 96 88 100 0 0 typ(ININ):path
+p 96 86 100 0 0 typ(INJN):path
+p 96 84 100 0 0 typ(INKN):path
+p 48 -288 100 0 0 typ(INLN):path
+p 541 -567 100 0 0 typ(OUTN):path
+p 96 80 100 0 0 typ(SDIS):path
+[layers]
+<symbol>
+r 0 32 -128 608 480
+v 0 608 160
+672 160
+_
+v 0 -32 -96
+32 -96
+_
+v 0 -32 -32
+32 -32
+_
+v 0 -32 0
+32 0
+_
+v 0 -32 32
+32 32
+_
+v 0 -32 64
+32 64
+_
+v 0 -32 96
+32 96
+_
+v 0 -32 128
+32 128
+_
+v 0 32 352
+608 352
+_
+v 0 32 416
+608 416
+_
+v 0 608 -64
+672 -64
+_
+v 0 608 224
+672 224
+_
+v 0 -32 320
+32 320
+_
+v 0 -32 288
+32 288
+_
+v 0 -32 256
+32 256
+_
+v 0 -32 224
+32 224
+_
+v 0 -32 192
+32 192
+_
+v 0 -32 160
+32 160
+_
+v 0 -32 -64
+32 -64
+_
+v 0 -32 352
+32 352
+_
+[comments]

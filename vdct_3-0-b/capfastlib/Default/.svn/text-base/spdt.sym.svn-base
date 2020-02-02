@@ -1,0 +1,35 @@
+[symbol2]
+bbox 320 304 512 368
+port 308 326 -100 0 x2 symbol 3 320 320 0
+port 500 326 -100 0 x3 symbol 3 512 320 0
+port 500 358 -100 0 x1 symbol 3 512 352 0
+uniq 0
+[tools]
+[attributes]
+p 384 270 100 0 0 (SUSIE)primitive:SPDT
+p 384 270 100 0 0 (!SUSIE)primitive:SPDT
+p 320 224 100 0 0 order:x1,x2,x3
+p 488 358 100 0 -1 pin(x1):1
+p 336 334 100 0 -1 pin(x2):2
+p 416 384 100 0 0 ref:*opt*
+p 320 192 100 0 0 reftype:SW
+p 320 160 100 0 0 revision:2.2
+p 488 325 100 0 -1 pin(x3):3
+[layers]
+<symbol>
+a 0 448 352 456 352 360
+a 0 448 320 456 320 360
+a 0 384 320 392 320 360
+v 0 512 320
+456 320
+_
+v 0 456 352
+512 352
+_
+v 0 320 320
+376 320
+_
+v 0 455 346
+391 324
+_
+[comments]

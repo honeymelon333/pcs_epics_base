@@ -1,0 +1,85 @@
+[symbol2]
+bbox -32 0 576 544
+port 6 234 -100 1792 U3 symbol 1 -32 224 0
+port 6 298 -100 1792 U2 symbol 1 -32 288 0
+port 8 106 100 1792 SDIS symbol 1 -32 96 0
+port 539 106 -100 1792 U1 symbol 2 576 96 0
+port 539 170 -100 1792 U0 symbol 2 576 160 0
+port 6 362 100 1792 DOL symbol 1 -32 352 0
+port 542 394 100 1792 FLNK symbol 2 576 384 0
+port 539 234 100 1792 OUT symbol 2 576 224 0
+port 8 170 100 1792 SLNK symbol 1 -32 160 0
+uniq 7
+[tools]
+[attributes]
+p 208 446 100 0 0 primitive:estringout
+p 64 334 100 0 1 SCAN:Passive
+p 64 302 100 0 1 PHAS:0
+p 64 270 100 0 1 EVNT:0
+p 205 488 100 0 -1 DTYP:Soft Channel
+p 64 238 100 0 1 PINI:NO
+p 64 206 100 0 1 OMSL:supervisory
+p 64 366 100 0 1 VAL:string
+p 64 174 100 0 1 IVOA:Continue normally
+p 64 142 100 0 1 IVOV:
+p 223 517 100 0 -1 Type:stringout
+p 288 238 100 0 1 DISV:1
+p 288 302 100 0 1 DISS:NO_ALARM
+p 288 270 100 0 1 PRIO:LOW
+p 64 110 100 0 1 SIOL:0.000000000000000e+00
+p 64 78 100 0 1 SIML:0.000000000000000e+00
+p 64 46 100 0 1 SIMS:NO_ALARM
+p 155 440 100 0 -1 DESC:string output record
+p 96 -82 100 0 0 def(FLNK):0.000000000000000e+00
+p 96 -100 100 0 0 typ(FLNK):path
+p 96 -132 100 0 0 typ(DOL):path
+p 96 -164 100 0 0 def(DOL):0.000000000000000e+00
+p 96 -164 100 0 0 pproc(DOL):NPP
+p 96 -164 100 0 0 palrm(DOL):NMS
+p 96 -165 100 0 0 typ(OUT):val
+p 96 -166 100 0 0 def(OUT):0.000000000000000e+00
+p 96 -198 100 0 0 def(SDIS):0.000000000000000e+00
+p 96 -240 100 0 0 typ(SDIS):path
+p 96 -240 100 0 0 pproc(SDIS):NPP
+p 96 -240 100 0 0 palrm(SDIS):NMS
+p 518 163 100 0 -1 username(U0):FLD0
+p 518 101 100 0 -1 username(U1):FLD1
+p -19 293 100 0 -1 username(U2):FLD2
+p -19 230 100 0 -1 username(U3):FLD3
+[layers]
+<symbol>
+r 0 32 0 512 544
+v 0 -32 224
+32 224
+_
+v 0 -32 288
+32 288
+_
+v 0 -32 96
+32 96
+_
+v 0 32 416
+512 416
+_
+v 0 32 480
+512 480
+_
+v 0 512 96
+576 96
+_
+v 0 512 160
+576 160
+_
+v 0 -32 352
+32 352
+_
+v 0 512 384
+576 384
+_
+v 0 512 224
+576 224
+_
+v 0 -32 160
+32 160
+_
+[comments]

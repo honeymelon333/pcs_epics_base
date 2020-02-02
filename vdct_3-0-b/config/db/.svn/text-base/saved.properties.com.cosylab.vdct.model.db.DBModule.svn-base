@@ -1,0 +1,31 @@
+#Defaults
+#Thu Oct 22 12:34:00 CEST 2009
+customizedTypes=ao, calc, ai
+backgroundcalc=-13108
+displayArrowDBF_INLINK=true
+dbdFiles=example/db/airc_example.dbd
+displayArrowDBF_FWDLINK=true
+dashSizeDBF_INLINK=5
+lineWidthDBF_FWDLINK=1.0
+lineWidthDBF_OUTLINK=1.0
+colorDBF_OUTLINK=-10066432
+colorDBF_INLINK=-10079488
+foregroundcalc=-3407872
+bordercalc=-65332
+loggingLevel=INFO
+borderao=-16737895
+foregroundao=-16751053
+lineWidthDBF_INLINK=1.0
+backgroundao=-3342388
+isDashedDBF_FWDLINK=true
+isDashedDBF_INLINK=true
+colorDBF_FWDLINK=-26368
+isDashedDBF_OUTLINK=true
+borderai=-16751002
+foregroundai=-16777063
+symbolPaths=capfastlib/Epics
+dashSizeDBF_FWDLINK=5
+displayArrowDBF_OUTLINK=true
+dashSizeDBF_OUTLINK=5
+backgroundai=-3355393
+customizedEdgeTypes=DBF_FWDLINK, DBF_INLINK, DBF_OUTLINK

@@ -1,0 +1,16 @@
+[symbol2]
+bbox 96 192 128 192
+port 128 176 -100 0 o[0-63] symbol 0 128 192 0
+port 32 208 -100 0 p[0-63] symbol 0 96 192 0
+uniq 1
+[tools]
+[attributes]
+p 64 128 50 0 0 wire(o[0-63]):p[0-63]
+p 64 96 100 0 0 revision:2.2
+p 80 160 50 0 0 model:null
+[layers]
+<symbol>
+v 0 96 192
+128 192
+_
+[comments]

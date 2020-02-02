@@ -1,0 +1,31 @@
+[symbol2]
+bbox 160 160 208 192
+port 142 182 -100 0 p symbol 0 160 176 0
+uniq 1
+[tools]
+[attributes]
+p 160 128 100 0 0 IO:output
+p 160 96 100 0 0 primitive:connector
+p 184 208 100 0 0 ref:
+p 160 64 100 0 0 (!RED)pack:
+p 160 32 100 0 0 pqty:
+p 160 0 100 0 0 revision:2.2
+p 160 -32 100 0 0 (RED)pack:
+p 160 -64 100 0 0 pin(p):1
+p 160 -96 100 0 0 fix:
+p 160 -128 100 0 0 reftype:
+p 160 -160 100 0 0 order:p
+p 160 -192 100 0 0 comment:output_physical_connector
+p 160 -224 100 0 0 partcode:
+p 160 -256 100 0 0 section:
+p 160 -288 100 0 0 pinnumber(p):
+[layers]
+<symbol>
+v 0 192 192
+208 176
+192 160
+_
+v 0 160 176
+208 176
+_
+[comments]

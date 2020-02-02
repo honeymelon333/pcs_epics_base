@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database>
+<auxInfo name="version" scalarType="string">3.0-beta</auxInfo>
+<record recordName="allTypesInitial">
+<scalar name="boolean" scalarType="boolean">true</scalar>
+<scalar name="byte" scalarType="byte">0x7f</scalar>
+<scalar name="short" scalarType="short">0x7fff</scalar>
+<scalar name="int" scalarType="int">0x7fffffff</scalar>
+<scalar name="long" scalarType="long">0x7fffffffffffffff</scalar>
+<scalar name="float" scalarType="float">1.0</scalar>
+<scalar name="double" scalarType="double">-1e-5</scalar>
+<scalar name="string" scalarType="string">This is a string</scalar>
+<structure extends="doubleLimit" name="doubleLimit">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="low">0.0</scalar>
+<scalar name="high">10.0</scalar>
+</structure>
+<structure name="structureArray">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="doubleLimit" name="0">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="low">0.0</scalar>
+<scalar name="high">10.0</scalar>
+</structure>
+<structure extends="linearConvert" name="1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="engUnitsLow">0.0</scalar>
+<scalar name="engUnitsHigh">100.0</scalar>
+</structure>
+</structure>
+<structure name="arrayArray">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure name="arrayStructureArray">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure name="0">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="generic" name="0">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="doubleLimit" name="1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="low">0.0</scalar>
+<scalar name="high">10.0</scalar>
+</structure>
+</structure>
+<structure name="1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="generic" name="0">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="doubleLimit" name="1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="low">0.0</scalar>
+<scalar name="high">10.0</scalar>
+</structure>
+</structure>
+</structure>
+<structure extends="generic" name="allTypes">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="boolean" scalarType="boolean">true</scalar>
+<scalar name="byte" scalarType="byte">0x7f</scalar>
+<scalar name="short" scalarType="short">0x7fff</scalar>
+<scalar name="int" scalarType="int">0x7fffffff</scalar>
+<scalar name="long" scalarType="long">0x7fffffffffffffff</scalar>
+<scalar name="float" scalarType="float">1.0</scalar>
+<scalar name="double" scalarType="double">-1e-5</scalar>
+<scalar name="string" scalarType="string">This is a string</scalar>
+<structure extends="doubleLimit" name="doubleLimit">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="low">0.0</scalar>
+<scalar name="high">10.0</scalar>
+</structure>
+<structure name="structureArray">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="doubleLimit" name="0">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="low">0.0</scalar>
+<scalar name="high">10.0</scalar>
+</structure>
+<structure extends="linearConvert" name="1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="engUnitsLow">0.0</scalar>
+<scalar name="engUnitsHigh">100.0</scalar>
+</structure>
+</structure>
+<structure name="arrayArray">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">915,173</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record recordName="counter">
+<structure extends="scan" name="scan">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="rate">1.0</scalar>
+</structure>
+<structure extends="alarm" name="alarm">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="calculation" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure name="calcArgs">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure name="min">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value" scalarType="double">0.0</scalar>
+</structure>
+<structure name="max">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value" scalarType="double">10.0</scalar>
+</structure>
+<structure name="inc">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value" scalarType="double">0.5</scalar>
+</structure>
+</structure>
+<structure name="calculator">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="expression">(value+inc)&lt;=max ? value+inc : min</scalar>
+</structure>
+</structure>
+<structure extends="generic" name="link">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="dbOutputLink" name="0">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="wait" scalarType="boolean">true</scalar>
+<scalar name="pvname">counterOutput</scalar>
+<scalar name="process">true</scalar>
+</structure>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">556,20</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record recordName="counterOutput">
+<scalar name="value" scalarType="double"/>
+<structure extends="alarm" name="alarm">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="display" name="display">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="description">Sample Description</scalar>
+<scalar name="format">%f</scalar>
+<scalar name="resolution">1</scalar>
+<scalar name="units">volts</scalar>
+<structure name="limit">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="low">0.0</scalar>
+<scalar name="high">10.0</scalar>
+</structure>
+</structure>
+<structure extends="control" name="control">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure name="limit">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="low">0.0</scalar>
+<scalar name="high">10.0</scalar>
+</structure>
+<scalar name="minStep">.1</scalar>
+</structure>
+<structure extends="doubleAlarm" name="valueAlarm">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="active">true</scalar>
+<structure name="interval">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="doubleAlarmInterval" name="0">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">2</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">major</scalar>
+</structure>
+<scalar name="message">LOWLOW</scalar>
+</structure>
+<structure extends="doubleAlarmInterval" name="1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">4</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">minor</scalar>
+</structure>
+<scalar name="message">LOW</scalar>
+</structure>
+<structure extends="doubleAlarmInterval" name="2">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">6</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">none</scalar>
+</structure>
+<scalar name="message">none</scalar>
+</structure>
+<structure extends="doubleAlarmInterval" name="3">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">8</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">minor</scalar>
+</structure>
+<scalar name="message">HIGH</scalar>
+</structure>
+<structure extends="doubleAlarmInterval" name="4">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">10</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">major</scalar>
+</structure>
+<scalar name="message">HIGHHIGH</scalar>
+</structure>
+</structure>
+<structure name="outOfRange">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">invalid</scalar>
+</structure>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1100,322</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="counterWithAlarm">
+<scalar name="value" scalarType="int"/>
+<structure extends="alarm" name="alarm">
+<auxInfo name="vdctPositionInfo" scalarType="string">80,80</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">160,160</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="calculation" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">240,240</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure name="calculator">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="expression">(value+1)&lt;=10 ? value+1 : 0</scalar>
+</structure>
+</structure>
+<structure extends="intAlarm" name="valueAlarm">
+<auxInfo name="vdctPositionInfo" scalarType="string">320,320</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="active">true</scalar>
+<structure name="interval">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="intAlarmInterval" name="0">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">2</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">major</scalar>
+</structure>
+<scalar name="message">LOWLOW</scalar>
+</structure>
+<structure extends="intAlarmInterval" name="1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">4</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">major</scalar>
+</structure>
+<scalar name="message">LOW</scalar>
+</structure>
+<structure extends="intAlarmInterval" name="2">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">6</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">major</scalar>
+</structure>
+<scalar name="message">none</scalar>
+</structure>
+<structure extends="intAlarmInterval" name="3">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">8</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">major</scalar>
+</structure>
+<scalar name="message">HIGH</scalar>
+</structure>
+<structure extends="intAlarmInterval" name="4">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="value">10</scalar>
+<structure name="severity">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">major</scalar>
+</structure>
+<scalar name="message">HIGHHIGH</scalar>
+</structure>
+</structure>
+<structure name="outOfRange">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="choice">invalid</scalar>
+</structure>
+</structure>
+<structure extends="dbProcessLink" name="caprocess">
+<auxInfo name="vdctPositionInfo" scalarType="string">400,400</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<structure extends="dbProcessLink" name="dbprocess">
+<auxInfo name="vdctPositionInfo" scalarType="string">480,480</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">20,1102</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">544,434</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="counterWithCALinks">
+<scalar name="value" scalarType="int"/>
+<structure extends="alarm" name="alarm">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="calculation" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure name="calculator">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="expression">(value+1)&lt;=10 ? value+1 : 0</scalar>
+</structure>
+</structure>
+<structure extends="generic" name="link">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="caProcessLink" name="process1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink1</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="caProcessLink" name="process2">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink2</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="caProcessLink" name="process3">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink3</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="caProcessLink" name="process4">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink4</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="caProcessLink" name="process5">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink5</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="caProcessLink" name="process6">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink6</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="caProcessLink" name="process7">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink7</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="caProcessLink" name="process8">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink8</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="caProcessLink" name="process9">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">calink9</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">220,922</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink1">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">463,267</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink2">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">460,422</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink3">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">540,502</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink4">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">620,582</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink5">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">700,662</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink6">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">780,742</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink7">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">860,822</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink8">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">965,875</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="calink9">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="caInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithCALinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1040,982</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="counterWithDBLinks">
+<scalar name="value" scalarType="int"/>
+<structure extends="alarm" name="alarm">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<structure extends="calculation" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure name="calculator">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="expression">(value+1)&lt;=10 ? value+1 : 0</scalar>
+</structure>
+</structure>
+<structure extends="generic" name="link">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<structure extends="dbProcessLink" name="process1">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink1</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="dbProcessLink" name="process2">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink2</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="dbProcessLink" name="process3">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink3</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="dbProcessLink" name="process4">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink4</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="dbProcessLink" name="process5">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink5</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="dbProcessLink" name="process6">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink6</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="dbProcessLink" name="process7">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink7</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="dbProcessLink" name="process8">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink8</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+<structure extends="dbProcessLink" name="process9">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">dblink9</scalar>
+<scalar name="wait" scalarType="boolean">false</scalar>
+</structure>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">599,1167</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink1">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1180,1142</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink2">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1260,1222</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink3">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1340,1302</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink4">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1420,1382</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink5">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1500,1462</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink6">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1580,1542</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink7">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1660,1622</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink8">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1740,1702</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<record extends="generic" recordName="dblink9">
+<structure extends="timeStamp" name="timeStamp">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</structure>
+<scalar name="value" scalarType="double"/>
+<structure extends="dbInputLink" name="input">
+<auxInfo name="vdctPositionInfo" scalarType="string">-1,-1</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+<scalar name="pvname">counterWithDBLinks</scalar>
+</structure>
+<auxInfo name="vdctPositionInfo" scalarType="string">1820,1782</auxInfo>
+<auxInfo name="vdctViewPointInfo" scalarType="string">0,0</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">1.0</auxInfo>
+</record>
+<auxInfo name="vdctViewPointInfo" scalarType="string">359,727</auxInfo>
+<auxInfo name="vdctViewScaleInfo" scalarType="string">0.67</auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counter.link counterOutput </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithAlarm counterWithCALinks </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithAlarm counterWithDBLinks </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink1 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink2 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink3 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink4 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink5 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink6 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink7 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink8 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks.link calink9 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink1 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink2 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink3 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink4 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink5 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink6 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink7 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink8 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithCALinks calink9  327,1037 401,1037 401,1073 1041,1073</auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink1 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink2 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink3 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink4 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink5 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink6 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink7 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink8 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks.link dblink9 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink1 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink2 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink3 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink4 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink5 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink6 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink7 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink8 </auxInfo>
+<auxInfo name="edgeControlPoints" scalarType="string">counterWithDBLinks dblink9 </auxInfo>
+</database>

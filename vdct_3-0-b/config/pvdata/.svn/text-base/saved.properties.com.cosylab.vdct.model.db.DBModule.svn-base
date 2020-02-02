@@ -1,0 +1,20 @@
+#Defaults
+#Tue Oct 20 15:56:53 CEST 2009
+customizedTypes=
+displayArrowDBF_INLINK=true
+displayArrowDBF_FWDLINK=true
+dashSizeDBF_INLINK=0
+lineWidthDBF_FWDLINK=1.0
+lineWidthDBF_OUTLINK=1.0
+colorDBF_OUTLINK=-16777216
+colorDBF_INLINK=-16777216
+loggingLevel=INFO
+lineWidthDBF_INLINK=1.0
+isDashedDBF_FWDLINK=false
+isDashedDBF_INLINK=false
+colorDBF_FWDLINK=-16777216
+isDashedDBF_OUTLINK=false
+dashSizeDBF_FWDLINK=0
+displayArrowDBF_OUTLINK=true
+dashSizeDBF_OUTLINK=0
+customizedEdgeTypes=DBF_FWDLINK, DBF_INLINK, DBF_OUTLINK

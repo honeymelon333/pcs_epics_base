@@ -1,0 +1,23 @@
+[symbol2]
+bbox 128 288 272 400
+uniq 6
+[tools]
+[attributes]
+p 160 446 100 0 0 primitive:permissive
+p 148 302 100 0 -1 Type:permissive
+p 96 382 100 0 0 Node:nodename
+p 96 318 100 0 0 DESC:permissive record
+p 96 286 100 0 0 LABL:label
+[layers]
+<symbol>
+r 0 128 400 272 288
+v 0 192 352
+224 384
+200 352
+208 352
+176 320
+196 348
+188 348
+192 352
+_
+[comments]

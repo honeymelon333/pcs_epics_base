@@ -1,0 +1,6 @@
+#Defaults
+#Thu Oct 22 17:30:45 CEST 2009
+lastModule=PVdata module
+loggingLevel=INFO
+routerType=orthogonal
+loadedModules=com.cosylab.vdct.model.db.DBModule, com.cosylab.vdct.model.pvdata.PVModule

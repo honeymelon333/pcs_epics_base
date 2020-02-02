@@ -1,0 +1,20 @@
+[symbol2]
+bbox 80 144 112 176
+port 78 166 -100 0 p symbol 0 96 160 0
+uniq 1
+[tools]
+[attributes]
+p 16 64 100 0 0 model:connector
+p 16 32 100 0 0 revision:2.2
+p 32 96 100 0 0 IO:undefined
+[layers]
+<symbol>
+v 0 80 176
+80 144
+112 144
+112 176
+_
+v 0 80 176
+112 176
+_
+[comments]

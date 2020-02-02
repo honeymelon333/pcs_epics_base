@@ -1,0 +1,59 @@
+[symbol2]
+bbox -32 32 480 480
+port 448 73 100 1792 LNK6 symbol 2 480 64 0
+port 448 137 100 1792 LNK5 symbol 2 480 128 0
+port 448 201 100 1792 LNK4 symbol 2 480 192 0
+port 448 265 100 1792 LNK3 symbol 2 480 256 0
+port 448 329 100 1792 LNK2 symbol 2 480 320 0
+port 448 393 100 1792 LNK1 symbol 2 480 384 0
+port 5 201 100 1792 SDIS symbol 1 -32 192 0
+uniq 6
+[tools]
+[attributes]
+p 160 446 100 0 0 primitive:fanout
+p 192 446 100 0 -1 Type:fanout
+p 96 382 100 0 1 Node:nodename
+p 96 350 100 0 1 DISV:0
+p 96 286 100 0 1 DESC:fanout record
+p 96 -82 100 0 0 def(SDIS):0.000000
+p 96 -100 100 0 0 typ(SDIS):path
+p 96 -132 100 0 0 typ(LNK1):path
+p 96 -164 100 0 0 def(LNK1):0.000000
+p 96 -196 100 0 0 typ(LNK2):path
+p 96 -228 100 0 0 def(LNK2):0.000000
+p 96 -260 100 0 0 typ(LNK3):path
+p 96 -292 100 0 0 def(LNK3):0.000000
+p 96 -324 100 0 0 typ(LNK4):path
+p 96 -356 100 0 0 def(LNK4):0.000000
+p 96 -388 100 0 0 typ(LNK5):path
+p 96 -420 100 0 0 def(LNK5):0.000000
+p 96 -452 100 0 0 typ(LNK6):path
+p 96 -484 100 0 0 def(LNK6):0.000000
+[layers]
+<symbol>
+r 0 32 32 416 480
+v 0 416 64
+480 64
+_
+v 0 416 128
+480 128
+_
+v 0 416 192
+480 192
+_
+v 0 416 256
+480 256
+_
+v 0 416 320
+480 320
+_
+v 0 32 416
+416 416
+_
+v 0 416 384
+480 384
+_
+v 0 -32 192
+32 192
+_
+[comments]

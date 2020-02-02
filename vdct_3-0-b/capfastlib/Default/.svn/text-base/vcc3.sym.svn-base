@@ -1,0 +1,30 @@
+[symbol2]
+bbox 208 160 240 224
+port 224 168 -100 0 Vcc symbol 3 224 160 0
+uniq 1
+[tools]
+[attributes]
+p 160 96 100 0 0 connectortype:global
+p 160 128 100 0 0 model:connector
+p 160 64 100 0 0 revision:2.2
+p 160 160 100 0 0 id:Vcc3
+[layers]
+<symbol>
+a 0 224 208 224 192 360
+v 0 216 176
+232 176
+_
+v 0 220 216
+228 216
+222 210
+226 210
+228 208
+228 202
+226 200
+222 200
+220 202
+_
+v 0 224 192
+224 160
+_
+[comments]

@@ -1,0 +1,155 @@
+<?xml version="1.0" ?>
+<database>
+
+
+<structure structureName = "alarmSupportFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.AlarmSupportFactory</scalar>
+</structure>
+
+<structure structureName = "booleanAlarmFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.BooleanAlarmFactory</scalar>
+</structure>
+
+<structure structureName = "byteAlarmFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.ByteAlarmFactory</scalar>
+</structure>
+
+<structure structureName = "shortAlarmFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.ShortAlarmFactory</scalar>
+</structure>
+
+<structure structureName = "intAlarmFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.IntAlarmFactory</scalar>
+</structure>
+
+<structure structureName = "longAlarmFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.LongAlarmFactory</scalar>
+</structure>
+
+<structure structureName = "floatAlarmFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.FloatAlarmFactory</scalar>
+</structure>
+
+<structure structureName = "doubleAlarmFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.DoubleAlarmFactory</scalar>
+</structure>
+
+<structure structureName = "enumeratedAlarmFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.alarm.EnumeratedAlarmFactory</scalar>
+</structure>
+
+<structure structureName = "alarm" extends = "alarm" >
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.alarmSupportFactory</auxInfo>
+</structure>
+
+<structure structureName = "byteAlarmInterval">
+  <scalar name = "value" scalarType = "byte" />
+  <structure name = "severity" extends = "alarmSeverity" />
+  <scalar name = "message" scalarType = "string" />
+</structure>
+<structure structureName = "byteAlarm" >
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.byteAlarmFactory</auxInfo>
+  <scalar name = "active" scalarType = "boolean" />
+  <structure name = "interval" />
+  <structure name = "outOfRange" extends = "alarmSeverity" />
+  <scalar name = "hystersis" scalarType = "byte" />
+</structure>
+
+<structure structureName = "shortAlarmInterval">
+  <scalar name = "value" scalarType = "short" />
+  <structure name = "severity" extends = "alarmSeverity" />
+  <scalar name = "message" scalarType = "string" />
+</structure>
+<structure structureName = "shortAlarm" >
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.shortAlarmFactory</auxInfo>
+  <scalar name = "active" scalarType = "boolean" />
+  <structure name = "interval" />
+  <structure name = "outOfRange" extends = "alarmSeverity" />
+  <scalar name = "hystersis" scalarType = "short" />
+</structure>
+
+<structure structureName = "intAlarmInterval">
+  <scalar name = "value" scalarType = "int" />
+  <structure name = "severity" extends = "alarmSeverity" />
+  <scalar name = "message" scalarType = "string" />
+</structure>
+<structure structureName = "intAlarm" >
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.intAlarmFactory</auxInfo>
+  <scalar name = "active" scalarType = "boolean" />
+  <structure name = "interval" />
+  <structure name = "outOfRange" extends = "alarmSeverity" />
+  <scalar name = "hystersis" scalarType = "int" />
+</structure>
+
+<structure structureName = "longAlarmInterval">
+  <scalar name = "value" scalarType = "long" />
+  <structure name = "severity" extends = "alarmSeverity" />
+  <scalar name = "message" scalarType = "string" />
+</structure>
+<structure structureName = "longAlarm">
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.longAlarmFactory</auxInfo>
+  <scalar name = "active" scalarType = "boolean" />
+  <structure name = "interval" />
+  <structure name = "outOfRange"  extends = "alarmSeverity" />
+  <scalar name = "hystersis" scalarType = "long" />
+</structure>
+
+<structure structureName = "floatAlarmInterval">
+  <scalar name = "value" scalarType = "float" />
+  <structure name = "severity" extends = "alarmSeverity" />
+  <scalar name = "message" scalarType = "string" />
+</structure>
+<structure structureName = "floatAlarm">
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.floatAlarmFactory</auxInfo>
+  <scalar name = "active" scalarType = "boolean" />
+  <structure name = "interval" />
+  <structure name = "outOfRange"  extends = "alarmSeverity" />
+  <scalar name = "hystersis" scalarType = "float" />
+</structure>
+
+<structure structureName = "doubleAlarmInterval">
+  <scalar name = "value" scalarType = "double" />
+  <structure name = "severity" extends = "alarmSeverity" />
+  <scalar name = "message" scalarType = "string" />
+</structure>
+<structure structureName = "doubleAlarm" >
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.doubleAlarmFactory</auxInfo>
+  <scalar name = "active" scalarType = "boolean" />
+  <structure name = "interval" />
+  <structure name = "outOfRange"  extends = "alarmSeverity" />
+  <scalar name = "hystersis" scalarType = "double" />
+</structure>
+
+<structure structureName = "booleanAlarm">
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.booleanAlarmFactory</auxInfo>
+  <scalar name = "active" scalarType = "boolean" />
+  <structure name = "falseAlarm" extends = "alarmSeverity" />
+  <scalar name = "falseMessage" scalarType = "string" />
+  <structure name = "trueAlarm" extends = "alarmSeverity" />
+  <scalar name = "trueMessage" scalarType = "string" />
+  <structure name = "changeStateAlarm" extends = "alarmSeverity" />
+  <scalar name = "changeStateMessage" scalarType = "string" />
+</structure>
+
+<structure structureName = "enumeratedAlarmState">
+  <structure name = "severity" extends = "alarmSeverity" />
+  <scalar name = "message" scalarType = "string" />
+</structure>
+<structure structureName = "enumeratedAlarm">
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.enumeratedAlarmFactory</auxInfo>
+  <scalar name = "active" scalarType = "boolean" />
+   <!-- each stateAlarm field must be structure enumeratedAlarmState -->
+  <structure name = "stateAlarm"/>
+  <structure name = "changeStateAlarm" extends = "enumeratedAlarmState" />
+</structure>
+
+</database>

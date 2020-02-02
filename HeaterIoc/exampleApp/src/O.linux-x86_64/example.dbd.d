@@ -1,0 +1,57 @@
+# DO NOT EDIT: This file created by mkmf.pl,v 1.5 2002/03/25 21:33:24 jba Exp $ 
+
+../O.Common/example.dbd : /usr/local/epics/base/dbd/base.dbd
+../O.Common/example.dbd : ../xxxSupport.dbd
+../O.Common/example.dbd : ../dbSubExample.dbd
+../O.Common/example.dbd : ../exampleHello.dbd
+../O.Common/example.dbd : ../initTrace.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuGlobal.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuConvert.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/aaiRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/aaoRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/aiRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/aoRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/aSubRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/biRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/boRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/calcRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/calcoutRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/compressRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/dfanoutRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/eventRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/fanoutRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/longinRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/longoutRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/mbbiRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/mbbiDirectRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/mbboRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/mbboDirectRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/permissiveRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/pidRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/pulseTrainRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/epidRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/selRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/seqRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/stateRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/stringinRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/stringoutRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/subRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/subArrayRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/waveformRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/devSoft.dbd
+../O.Common/example.dbd : ../xxxRecord.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuAlarmSevr.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuAlarmStat.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuCompress.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuFtype.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuIvoa.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuOmsl.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuPini.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuPriority.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuScan.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuSimm.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/menuYesNo.dbd
+../O.Common/example.dbd : /usr/local/epics/base/dbd/dbCommon.dbd
+
+
+../O.Common/exampleInclude.dbd : ../Makefile

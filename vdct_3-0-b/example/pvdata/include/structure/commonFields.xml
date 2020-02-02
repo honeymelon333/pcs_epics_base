@@ -1,0 +1,34 @@
+<?xml version = "1.0" ?>
+<database>
+<structure structureName = "scanFactory">
+  <scalar name = "supportFactory" scalarType = "string">
+     org.epics.ioc.support.basic.ScanFactory</scalar>
+</structure>
+
+<structure structureName = "scanPriority" >
+  <auxInfo name = "pvReplaceFactory" scalarType = "string">org.epics.pvData.enumeratedFactory</auxInfo>
+  <scalar name = "index" scalarType = "int"/>
+  <scalar name = "choice" scalarType = "string">low</scalar>
+  <array name = "choices" scalarType = "string">
+      lowest,lower,low,middle,high,higher,highest</array>
+</structure>
+
+<structure structureName = "scanType">
+  <auxInfo name = "pvReplaceFactory" scalarType = "string">org.epics.pvData.enumeratedFactory</auxInfo>
+  <scalar name = "index"  scalarType = "int"/>
+  <scalar name = "choice" scalarType = "string"/>
+  <array name = "choices" scalarType = "string">passive,event,periodic</array>
+</structure>
+
+<structure structureName = "scan" >
+  <auxInfo name = "supportFactory" scalarType = "string">org.epics.ioc.scanFactory</auxInfo>
+  <structure name = "priority" extends = "scanPriority" />
+  <structure name = "type" extends = "scanType" />
+  <scalar name = "rate" scalarType = "double"  default = "1.0" />
+  <scalar name = "eventName" scalarType = "string" />
+  <scalar name = "processSelf" scalarType = "boolean" />
+  <scalar name = "processAfterStart" scalarType = "boolean">false</scalar>
+  <scalar name = "maxConsecutiveActive" scalarType = "int">1</scalar>
+</structure>
+
+</database>

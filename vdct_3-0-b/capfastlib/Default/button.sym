@@ -1,0 +1,43 @@
+[symbol2]
+bbox 320 304 512 352
+port 308 326 -100 0 x1 symbol 3 320 320 0
+port 500 326 -100 0 x2 symbol 3 512 320 0
+uniq 0
+[tools]
+[attributes]
+p 320 256 100 0 0 (SUSIE)primitive:BUTTON
+p 320 256 100 0 0 (!SUSIE)primitive:BUTTON
+p 320 224 100 0 0 order:x1,x2
+p 336 334 100 0 -1 pin(x1):1
+p 496 334 100 0 -1 pin(x2):2
+p 416 368 100 0 0 ref:*opt*
+p 320 160 100 0 0 revision:2.2
+p 320 192 100 0 0 reftype:SW
+[layers]
+<symbol>
+a 0 452 320 460 320 360
+a 0 380 320 388 320 360
+v 0 456 336
+460 336
+_
+v 0 452 336
+456 336
+_
+v 0 380 336
+372 336
+_
+v 0 320 320
+372 320
+_
+v 0 460 320
+512 320
+_
+v 0 380 336
+452 336
+_
+v 0 400 336
+400 352
+432 352
+432 336
+_
+[comments]

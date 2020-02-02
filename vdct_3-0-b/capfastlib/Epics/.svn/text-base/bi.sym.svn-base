@@ -1,0 +1,46 @@
+[symbol2]
+bbox -32 -32 480 480
+port 8 42 100 1792 SLNK symbol 1 -32 32 0
+port 393 222 100 1792 VAL symbol 2 480 224 0
+port 388 382 100 1792 FLNK symbol 2 480 384 0
+port 6 202 100 1792 INP symbol 1 -32 192 0
+uniq 2
+[tools]
+[attributes]
+p 208 446 100 0 0 primitive:bi
+p 96 366 100 0 1 SCAN:Passive
+p 96 334 100 0 1 PHAS:0
+p 96 302 100 0 1 EVNT:0
+p 168 426 100 0 -1 TYPE:cardType
+p 96 270 100 0 1 PINP:NO
+p 96 238 100 0 1 ZNAM:enabled
+p 96 206 100 0 1 ONAM:disabled
+p 96 174 100 0 1 ZSV:NO ALARM
+p 96 142 100 0 1 OSV:NO ALARM
+p 96 110 100 0 1 COSV:NO ALARM
+p 210 449 100 0 -1 Type:bi
+p 96 78 100 0 1 Node:nodename
+p 96 -18 100 0 1 DESC:binary input record
+p 96 -82 100 0 0 def(FLNK):0.000000
+p 96 -100 100 0 0 typ(FLNK):path
+p 96 -132 100 0 0 typ(INP):val
+p 96 -164 100 0 0 def(INP):#C0 B0
+[layers]
+<symbol>
+r 0 32 480 416 -32
+v 0 -32 32
+32 32
+_
+v 0 32 416
+416 416
+_
+v 0 416 224
+480 224
+_
+v 0 416 384
+480 384
+_
+v 0 -32 192
+32 192
+_
+[comments]

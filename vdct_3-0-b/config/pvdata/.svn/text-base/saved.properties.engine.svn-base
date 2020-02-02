@@ -1,0 +1,4 @@
+#Defaults
+#Wed Jul 01 00:18:52 CEST 2009
+lastModule=com.cosylab.vdct.model.pvdata.PVModule
+loadedModules=com.cosylab.vdct.model.db.DBModule, com.cosylab.vdct.model.pvdata.PVModule

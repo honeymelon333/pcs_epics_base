@@ -1,0 +1,6 @@
+#Defaults
+#Thu Oct 22 12:34:00 CEST 2009
+lastModule=EPICSv3 module
+loggingLevel=ALL
+routerType=orthogonal
+loadedModules=com.cosylab.vdct.model.db.DBModule, com.cosylab.vdct.model.pvdata.PVModule

@@ -1,0 +1,165 @@
+[symbol2]
+bbox -32 -128 672 480
+port 0 336 100 1792 PROC symbol 1 -32 320 0
+port 0 -80 100 1792 SDIS symbol 1 -32 -96 0
+port 0 -48 100 1792 SLNK symbol 1 -32 -64 0
+port 644 -48 100 1792 FLNK symbol 2 672 -64 0
+port 640 240 100 1792 P2PV symbol 2 672 224 0
+port 640 272 100 1792 P1PV symbol 2 672 256 0
+port 640 208 100 1792 P3PV symbol 2 672 192 0
+port 640 176 100 1792 P4PV symbol 2 672 160 0
+port 0 272 100 1792 D1PV symbol 1 -32 256 0
+port 0 240 100 1792 D2PV symbol 1 -32 224 0
+port 0 208 100 1792 D3PV symbol 1 -32 192 0
+port 0 176 100 1792 D4PV symbol 1 -32 160 0
+port 0 112 100 1792 R1PV symbol 1 -32 96 0
+port 0 80 100 1792 R2PV symbol 1 -32 64 0
+port 0 48 100 1792 R3PV symbol 1 -32 32 0
+port 0 16 100 1792 R4PV symbol 1 -32 0 0
+port 640 112 100 1792 T1PV symbol 2 672 96 0
+port 640 80 100 1792 T2PV symbol 2 672 64 0
+port 640 48 100 1792 T3PV symbol 2 672 32 0
+port 640 16 100 1792 T4PV symbol 2 672 0 0
+uniq 56
+[tools]
+[attributes]
+p 177 374 100 0 1 DESC:scan record
+p 96 158 100 0 0 DISS:NO_ALARM
+p 96 190 100 0 0 DISV:1
+p 96 254 100 0 0 EVNT:0
+p 96 32 100 0 0 FFO:Use F-Flags
+p 96 0 100 0 0 FPTS:Freeze
+p 272 320 100 0 1 MPTS:100
+p 448 320 100 0 1 NPTS:100
+p 64 240 100 0 1 P1EP:0
+p 64 144 100 0 0 P1HR:0
+p 64 96 100 0 0 P1LR:0
+p 64 176 100 0 0 P1PR:1
+p 64 208 100 0 1 P1SI:0.1
+p 64 272 100 0 1 P1SP:0
+p 320 240 100 0 1 P2EP:0
+p 320 144 100 0 0 P2HR:0
+p 320 112 100 0 0 P2LR:0
+p 320 176 100 0 0 P2PR:1
+p 320 208 100 0 1 P2SI:0.1
+p 320 272 100 0 1 P2SP:0
+p 96 -96 100 0 0 PASM:Stay
+p 96 286 100 0 0 PHAS:0
+p 96 222 100 0 0 PINI:NO
+p 96 62 100 0 0 PREC:2
+p 96 126 100 0 0 PRIO:HIGH
+p 676 -868 100 0 0 PROC:0
+p 64 96 100 0 1 R1DL:0
+p 64 64 100 0 1 R2DL:0
+p 64 32 100 0 1 R3DL:0
+p 64 0 100 0 1 R4DL:0
+p 96 318 100 0 1 SCAN:Passive
+p 297 453 100 0 -1 Type:scan
+p 216 -408 100 0 0 def(D1PV): 
+p 296 -488 100 0 0 def(D2PV): 
+p 316 -508 100 0 0 def(D3PV): 
+p 336 -528 100 0 0 def(D4PV): 
+p 161 -187 100 0 0 def(FLNK): 0.000000000000000e+0
+p 96 -256 100 0 0 def(P1PV): 
+p 96 -288 100 0 0 def(P2PV): 
+p 116 -308 100 0 0 def(P3PV): 
+p 136 -328 100 0 0 def(P4PV): 
+p 356 -548 100 0 0 def(R1PV): 
+p 376 -568 100 0 0 def(R2PV): 
+p 396 -588 100 0 0 def(R3PV): 
+p 416 -608 100 0 0 def(R4PV): 
+p 96 81 100 0 0 def(SDIS):0.000000000000000e+00
+p 516 -708 100 0 0 def(T1PV): 
+p 536 -728 100 0 0 def(T2PV): 
+p 592 -352 100 0 0 def(T3PV): 
+p 720 -32 100 0 0 def(T4PV): 
+p 96 80 100 0 0 pproc(SDIS):NPP
+p 272 446 100 0 0 primitive:escan
+p 196 -388 100 0 0 typ(D1PV):path
+p 236 -428 100 0 0 typ(D2PV):path
+p 256 -448 100 0 0 typ(D3PV):path
+p 276 -468 100 0 0 typ(D4PV):path
+p 161 -186 100 0 0 typ(FLNK):path
+p 512 -256 100 0 0 typ(P1PV):path
+p 512 -288 100 0 0 typ(P2PV):path
+p 156 -348 100 0 0 typ(P3PV):path
+p 176 -368 100 0 0 typ(P4PV):path
+p 436 -628 100 0 0 typ(R1PV):path
+p 456 -648 100 0 0 typ(R2PV):path
+p 476 -668 100 0 0 typ(R3PV):path
+p 496 -688 100 0 0 typ(R4PV):path
+p 96 80 100 0 0 typ(SDIS):path
+p 616 -808 100 0 0 typ(T1PV):path
+p 596 -788 100 0 0 typ(T2PV):path
+p 636 -828 100 0 0 typ(T3PV):path
+p 656 -848 100 0 0 typ(T4PV):path
+[layers]
+<symbol>
+r 0 32 -128 608 480
+v 0 -32 320
+32 320
+_
+v 0 -32 -96
+32 -96
+_
+v 0 -32 -64
+32 -64
+_
+v 0 32 352
+608 352
+_
+v 0 32 416
+608 416
+_
+v 0 608 -64
+672 -64
+_
+v 0 608 224
+672 224
+_
+v 0 608 256
+672 256
+_
+v 0 608 192
+672 192
+_
+v 0 608 160
+672 160
+_
+v 0 -32 256
+32 256
+_
+v 0 -32 224
+32 224
+_
+v 0 -32 192
+32 192
+_
+v 0 -32 160
+32 160
+_
+v 0 -32 96
+32 96
+_
+v 0 -32 64
+32 64
+_
+v 0 -32 32
+32 32
+_
+v 0 -32 0
+32 0
+_
+v 0 608 96
+672 96
+_
+v 0 608 64
+672 64
+_
+v 0 608 32
+672 32
+_
+v 0 608 0
+672 0
+_
+[comments]

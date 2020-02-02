@@ -1,0 +1,23 @@
+[symbol2]
+bbox 0 0 1607 161
+uniq 0
+[tools]
+[attributes]
+p 0 -32 100 0 0 model:null
+p 0 -64 100 0 0 revision:Discontinued
+[layers]
+<symbol>
+r 0 0 0 1607 161
+v 0 1284 0
+1284 80
+_
+v 0 1002 0
+1002 80
+_
+v 0 122 0
+122 80
+_
+v 0 0 80
+1607 80
+_
+[comments]

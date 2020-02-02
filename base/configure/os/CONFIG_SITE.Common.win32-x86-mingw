@@ -1,0 +1,9 @@
+# CONFIG_SITE.Common.win32-x86-mingw
+#
+# Revision-Id: anj@aps.anl.gov-20150224203042-6z73a9n1sd5iw4b5
+#
+# Site Specific definitions for win32-x86-mingw target
+
+# If readline is available uncomment the following line
+# to enable command-line editing and history support
+#COMMANDLINE_LIBRARY = READLINE

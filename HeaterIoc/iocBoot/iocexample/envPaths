@@ -1,0 +1,4 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","iocexample")
+epicsEnvSet("TOP","/usr/local/epics/apps/Ftest")
+epicsEnvSet("EPICS_BASE","/usr/local/epics/base")

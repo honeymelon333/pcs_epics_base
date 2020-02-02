@@ -1,0 +1,16 @@
+[symbol2]
+bbox 32 288 416 480
+uniq 6
+[tools]
+[attributes]
+p 160 446 100 0 0 primitive:state
+p 192 446 100 0 -1 Type:state
+p 96 382 100 0 1 Node:nodename
+p 96 318 100 0 1 DESC:state record
+[layers]
+<symbol>
+r 0 32 288 416 480
+v 0 32 416
+416 416
+_
+[comments]

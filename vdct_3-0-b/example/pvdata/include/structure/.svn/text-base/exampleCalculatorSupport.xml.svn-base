@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<database>
+<structure structureName = "counterCalculatorFactory">
+ <scalar name = "supportFactory" scalarType = "string">
+   org.epics.ioc.support.calc.example.CounterCalculatorFactory</scalar>
+</structure>
+
+</database>

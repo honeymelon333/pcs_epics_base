@@ -1,0 +1,28 @@
+[symbol2]
+bbox 208 160 240 224
+port 224 168 -100 0 Vcc symbol 3 224 160 0
+uniq 1
+[tools]
+[attributes]
+p 160 96 100 0 0 connectortype:global
+p 160 128 100 0 0 model:connector
+p 160 64 100 0 0 revision:2.2
+p 160 160 100 0 0 id:Vee
+[layers]
+<symbol>
+v 0 216 208
+232 208
+_
+v 0 224 192
+224 164
+_
+v 0 224 216
+224 200
+_
+v 0 224 224
+208 208
+224 192
+240 208
+224 224
+_
+[comments]

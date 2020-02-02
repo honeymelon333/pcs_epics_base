@@ -1,0 +1,140 @@
+[symbol2]
+bbox 256 288 864 896
+port 833 713 100 1792 OUT symbol 2 864 704 0
+port 298 490 100 1792 STL symbol 1 256 480 0
+port 298 458 100 1792 ENL symbol 1 256 448 0
+port 290 392 100 1792 SLNK symbol 1 256 384 0
+port 833 681 100 1792 VAL symbol 2 864 672 0
+port 833 649 100 1792 DLY symbol 2 864 640 0
+port 831 618 100 1792 WIDE symbol 2 864 608 0
+port 831 746 100 1792 FLNK symbol 2 864 736 0
+port 290 360 100 1792 SDIS symbol 1 256 352 0
+port 831 523 -100 1792 U0 symbol 2 864 512 0
+port 831 459 -100 1792 U1 symbol 2 864 448 0
+port 831 395 -100 1792 U2 symbol 2 864 384 0
+port 831 331 -100 1792 U3 symbol 2 864 320 0
+port 300 751 -100 1792 U4 symbol 1 256 736 0
+port 300 719 -100 1792 U5 symbol 1 256 704 0
+port 300 687 -100 1792 U6 symbol 1 256 672 0
+port 300 655 -100 1792 U7 symbol 1 256 640 0
+uniq 7
+[tools]
+[attributes]
+p 256 256 100 0 0 primitive:epulse
+p 528 862 100 0 -1 Type:pulse
+p 448 798 100 0 -1 DESC:pulse output record
+p 352 734 100 0 1 SCAN:Passive
+p 352 702 100 0 1 PINI:NO
+p 352 670 100 0 1 PHAS:0
+p 352 638 100 0 1 EVNT:0
+p 352 606 100 0 1 DTYP:Camac
+p 352 574 100 0 1 DISV:1
+p 352 542 100 0 1 SDIS:0
+p 352 510 100 0 1 DISS:NO_ALARM
+p 352 478 100 0 1 PRIO:LOW
+p 352 446 100 0 1 FLNK:0
+p 352 414 100 0 1 CLKR:1000000
+p 352 382 100 0 1 PREC:2
+p 352 350 100 0 1 UNIT:nSec
+p 576 734 100 0 1 MIND:0
+p 576 702 100 0 1 MAXD:0
+p 576 670 100 0 1 SDOF:0
+p 576 638 100 0 1 MINW:0
+p 576 606 100 0 1 MAXW:0
+p 576 574 100 0 1 TVHI:0
+p 576 542 100 0 1 TVLO:0
+p 576 510 100 0 1 MINT:0
+p 576 478 100 0 1 MAXT:0
+p 576 446 100 0 1 TSRC:Hardware
+p 576 414 100 0 1 TMOD:Rising Edge
+p 576 382 100 0 1 TLOG:None
+p 576 350 100 0 1 ENV:Enable
+p 256 224 100 0 0 typ(STL):path
+p 256 192 100 0 0 def(STL):0
+p 256 160 100 0 0 palrm(STL):NMS
+p 256 128 100 0 0 pproc(STL):NPP
+p 256 96 100 0 0 typ(ENL):path
+p 256 64 100 0 0 def(ENL):0
+p 256 32 100 0 0 palrm(ENL):NMS
+p 256 0 100 0 0 pproc(ENL):NPP
+p 256 -32 100 0 0 typ(OUT):path
+p 256 -64 100 0 0 def(OUT):0
+p 256 -96 100 0 0 palrm(OUT):NMS
+p 256 -128 100 0 0 pproc(OUT):NPP
+p 808 518 100 0 -1 username(U0):FLD0
+p 808 454 100 0 -1 username(U1):FLD1
+p 808 389 100 0 -1 username(U2):FLD2
+p 807 326 100 0 -1 username(U3):FLD3
+p 269 742 100 0 -1 username(U4):FLD4
+p 269 710 100 0 -1 username(U5):FLD5
+p 269 678 100 0 -1 username(U6):FLD6
+p 270 645 100 0 -1 username(U7):FLD7
+p 256 -416 100 0 0 typ(U0):val
+p 256 -448 100 0 0 typ(U1):val
+p 256 -480 100 0 0 typ(U2):val
+p 256 -512 100 0 0 typ(U3):val
+p 256 -544 100 0 0 typ(U4):val
+p 256 -576 100 0 0 typ(U5):val
+p 256 -608 100 0 0 typ(U6):val
+p 256 -640 100 0 0 typ(U7):val
+[layers]
+<symbol>
+r 0 320 288 800 896
+v 0 800 704
+864 704
+_
+v 0 256 480
+320 480
+_
+v 0 256 448
+320 448
+_
+v 0 256 384
+320 384
+_
+v 0 800 672
+864 672
+_
+v 0 800 640
+864 640
+_
+v 0 800 608
+864 608
+_
+v 0 800 736
+864 736
+_
+v 0 256 352
+320 352
+_
+v 0 800 512
+864 512
+_
+v 0 800 448
+864 448
+_
+v 0 800 384
+864 384
+_
+v 0 800 320
+864 320
+_
+v 0 256 736
+320 736
+_
+v 0 256 704
+320 704
+_
+v 0 256 672
+320 672
+_
+v 0 256 640
+320 640
+_
+v 0 320 768
+800 768
+_
+v 0 320 832
+800 832
+_
+[comments]

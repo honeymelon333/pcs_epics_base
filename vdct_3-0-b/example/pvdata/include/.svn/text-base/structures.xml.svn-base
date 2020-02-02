@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<database>
+<include addPath = "example/pvdata/include/structure" />
+<include href = "generic.xml" />
+<include href = "alarm_1.xml" />
+<include href = "alarm.xml" />
+<include href = "analog.xml" />
+<include href = "supportState.xml" />
+<include href = "caLink.xml" />
+<include href = "calc.xml" />
+<include href = "commonFields.xml" />
+<include href = "limit.xml" />
+<include href = "control.xml" />
+<include href = "dbLink.xml" />
+<include href = "delay.xml" />
+<include href = "digital.xml" />
+<include href = "display.xml" />
+<include href = "enumerated.xml" />
+<include href = "event.xml" />
+<include href = "exampleCalculatorSupport.xml" />
+<include href = "processControl.xml" />
+<include href = "timeStamp.xml" />
+
+<include removePath = "example/pvdata/include/structure" />
+</database>
+

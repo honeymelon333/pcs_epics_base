@@ -1,0 +1,16 @@
+[symbol2]
+bbox 224 288 256 320
+uniq 0
+[tools]
+[attributes]
+p 224 224 100 0 0 revision:2.2
+p 224 256 100 0 0 model:null
+[layers]
+<symbol>
+v 7 224 304
+240 320
+256 304
+240 288
+224 304
+_
+[comments]

@@ -1,0 +1,31 @@
+[symbol2]
+bbox 176 160 224 192
+port 206 182 -100 0 p symbol 0 224 176 0
+uniq 1
+[tools]
+[attributes]
+p 176 128 100 0 0 IO:input
+p 176 96 100 0 0 primitive:connector
+p 200 208 100 0 0 ref:
+p 176 64 100 0 0 (!RED)pack:
+p 176 32 100 0 0 pqty:
+p 176 0 100 0 0 revision:2.2
+p 176 -32 100 0 0 (RED)pack:
+p 176 -64 100 0 0 pin(p):1
+p 176 -96 100 0 0 fix:
+p 176 -128 100 0 0 reftype:
+p 176 -160 100 0 0 order:p
+p 176 -192 100 0 0 comment:
+p 176 -224 100 0 0 partcode:
+p 176 -256 100 0 0 section:
+p 176 -288 100 0 0 pinnumber(p):
+[layers]
+<symbol>
+v 0 192 176
+176 160
+_
+v 0 224 176
+192 176
+176 192
+_
+[comments]

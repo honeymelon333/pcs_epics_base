@@ -1,0 +1,91 @@
+[symbol2]
+bbox 0 32 672 416
+port 36 74 100 1792 SDIS symbol 1 0 64 0
+port 36 138 100 1792 SLNK symbol 1 0 128 0
+port 36 394 100 1792 INP symbol 1 0 384 0
+port 642 393 100 1792 FLNK symbol 2 672 384 0
+port 642 329 100 1792 VAL symbol 2 672 320 0
+port 642 265 -100 1792 U0 symbol 2 672 256 0
+port 642 201 -100 1792 U1 symbol 2 672 192 0
+port 642 137 -100 1792 U2 symbol 2 672 128 0
+port 642 73 -100 1792 U3 symbol 2 672 64 0
+port 36 330 -100 1792 U4 symbol 1 0 320 0
+port 36 266 -100 1792 U5 symbol 1 0 256 0
+port 36 202 -100 1792 U6 symbol 1 0 192 0
+uniq 17
+[tools]
+[attributes]
+p 144 190 100 0 0 primitive:compress
+p 128 286 100 0 1 SCAN:Passive
+p 128 254 100 0 1 PHAS:0
+p 128 222 100 0 1 EVNT:0
+p 128 190 100 0 1 PINI:NO
+p 128 158 100 0 1 DTYP:Soft Channel
+p 128 126 100 0 1 SIOL:0.000000000000000e+00
+p 128 94 100 0 1 SIML:0.000000000000000e+00
+p 384 286 100 0 1 DISV:1
+p 384 254 100 0 1 SIMS:NO_ALARM
+p 384 222 100 0 1 DISS:NO_ALARM
+p 226 364 100 0 1 DESC:event record
+p 305 394 100 0 -1 Type:event
+p 384 190 100 0 1 PRIO:LOW
+p 161 -187 100 0 0 def(FLNK):0.000000000000000e+00
+p 161 -186 100 0 0 typ(FLNK):path
+p 161 -219 100 0 0 typ(INP):path
+p 161 -251 100 0 0 def(INP):0.000000000000000e+00
+p 161 -251 100 0 0 pproc(INP):NPP
+p 161 -251 100 0 0 palrm(INP):NMS
+p 161 -283 100 0 0 def(SDIS):0.000000000000000e+00
+p 161 -315 100 0 0 typ(SDIS):path
+p 161 -315 100 0 0 pproc(SDIS):NPP
+p 161 -315 100 0 0 palrm(SDIS):NMS
+p 618 260 100 0 -1 username(U0):FLD0
+p 618 196 100 0 -1 username(U1):FLD1
+p 617 133 100 0 -1 username(U2):FLD2
+p 617 69 100 0 -1 username(U3):FLD3
+p 12 325 100 0 -1 username(U4):FLD4
+p 12 260 100 0 -1 username(U5):FLD5
+p 10 196 100 0 -1 username(U6):FLD6
+[layers]
+<symbol>
+r 0 64 32 608 416
+v 0 0 64
+64 64
+_
+v 0 64 352
+608 352
+_
+v 0 0 128
+64 128
+_
+v 0 0 384
+64 384
+_
+v 0 608 384
+672 384
+_
+v 0 608 320
+672 320
+_
+v 0 608 256
+672 256
+_
+v 0 608 192
+672 192
+_
+v 0 608 128
+672 128
+_
+v 0 608 64
+672 64
+_
+v 0 0 320
+64 320
+_
+v 0 0 256
+64 256
+_
+v 0 0 192
+64 192
+_
+[comments]

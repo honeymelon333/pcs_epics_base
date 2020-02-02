@@ -1,0 +1,21 @@
+[symbol2]
+bbox 32 176 64 208
+port 30 198 -100 0 P symbol 1 48 192 0
+uniq 5
+[tools]
+[attributes]
+p -64 96 100 0 0 model:connector
+p -64 64 100 0 0 revision:2.2
+p 0 128 100 0 0 IO:input
+[layers]
+<symbol>
+v 0 32 208
+48 192
+32 176
+64 176
+64 208
+_
+v 0 64 208
+32 208
+_
+[comments]

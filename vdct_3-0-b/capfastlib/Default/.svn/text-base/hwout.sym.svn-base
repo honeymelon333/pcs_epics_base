@@ -1,0 +1,22 @@
+[symbol2]
+bbox 544 560 736 592
+port 588 591 -100 1792 outp symbol 1 544 576 0
+uniq 0
+[tools]
+[attributes]
+p 654 536 100 0 0 primitive:hwout
+p 654 504 100 0 0 typ(outp):val
+p 640 567 100 0 -1 val(outp):#C0 B0
+[layers]
+<symbol>
+v 0 608 576
+640 592
+736 592
+736 560
+640 560
+608 576
+_
+v 0 544 576
+608 576
+_
+[comments]
