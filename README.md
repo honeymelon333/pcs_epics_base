@@ -17,7 +17,8 @@
 >基于 EPICS Base 3.14.12.5
 1. 增加对EPID的记录支持和设备支持。（Soft Channel）
 2. 增加对Pulse Train的记录支持和设备支持。（发现Pulse Train必须有硬件支持，没有软的设备支持）
-3. 增加了SCAN 域的选项：“600 Second” “300 second” “.05 second”  
+3. 增加了SCAN 域的选项：“600 Second” “300 second” “.05 second”
+4. 用calc实现RS 触发器功能  
 ---
 ### *HeaterIoc 文件夹*
 > 加热器IOC，包含PID温度控制、启停控制和超温连锁和复位
@@ -52,15 +53,14 @@ $(Heater):pid                    pid模块
 
 ![VDCT 变量关系 ](/images/heaterCtl.png "加热器开关控制")
 
-<center>启动控制模块变量说明
-
 |名称|变量名称|注释|类型|
 |--|--|--|--|
-|启动控制|$(Heater):start|1:启动 0：停止|bo|
+|启动控制|$(Heater):start|1:启动 脉冲触发|bo|
+|停止控制|$(Heater):stop|1:停止 脉冲触发|bo|
 |开关输出|$(Heater):CtrlOut|输出给DB连接\$(CTRL_OUT)<br>此处宏可直接替代为BO输出板卡通道的变量名 |bo|
 |启动RS触发器|$(Heater):startRS|A && (!(B\|\|D)) \|\| ( (!(B\|\|D) && C )<br> A:\$(Heater):start <br>B: \$(Heater):alarm<br> C:\$(Heater):startRS <br>D:\$(Heater):stop|calc|
 
-<center>超温报警模块变量说明
+<center>超温报警模块变量说明</center>
 
 |名称|变量名称|注释|类型|
 |--|--|--|--|
@@ -70,3 +70,14 @@ $(Heater):pid                    pid模块
 
 
 ![PID 变量关系 ](/images/HeaterPID.png "集热器PID工作模块")
+
+`2.加强器温度控制部分`
+
+<center>超温控制模块变量说明</center>
+
+|名称|变量名称|注释|类型|
+|--|--|--|--|
+|目标温度设定|\$(Heater):targetTempSet||ao|
+|阶段目标温度计算|\$(Heater):targetTempCalc|公式:(ABS(A-B)>5)?(A+C*(A>B?(-1):1)):B")<br>相当于RS触发器取反,S:复位 R:温度判断(B>D的判断值)<br>A：\$(TMP_FB) 目标温度反馈，可替代位目标温度的通道变量名<br>B：\$(Heater):targetTempSet 目标温度设定值<br>C：  3.3 度阶段升温阶梯<br>SCAN ： 扫描周期5分钟5分钟|calc|
+|温度控制|\$(Heater):pid|STPL：\$(Heater):targetTempCalc 目标温度<br>INP: \$(TMP_FB) 目标温度反馈，可替代位目标温度的通道变量名<br>OUTL:\$(PW_OUT)功率值输出通道0-24576|epid|
+|功率输出反馈值|\$(Heater):powerOutput|0-100%|ao|
