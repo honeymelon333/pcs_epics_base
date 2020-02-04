@@ -50,7 +50,7 @@ $(Heater):targetTempCalc  阶段目标温度计算
 $(Heater):pid                    pid模块
 ```
 
-####*1.加强器启停控制部分*
+> *1.加强器启停控制部分*
 
 ![VDCT 变量关系 ](/images/heaterCtl.png "加热器开关控制")
 
@@ -61,7 +61,7 @@ $(Heater):pid                    pid模块
 |开关输出|$(Heater):CtrlOut|输出给DB连接\$(CTRL_OUT)<br>此处宏可直接替代为BO输出板卡通道的变量名 |bo|
 |启动RS触发器|$(Heater):startRS|A && (!(B\|\|D)) \|\| ( (!(B\|\|D) && C )<br> A:\$(Heater):start <br>B: \$(Heater):alarm<br> C:\$(Heater):startRS <br>D:\$(Heater):stop|calc|
 
-####*2. 超温报警模块变量说明*
+> *2. 超温报警模块变量说明*
 
 |名称|变量名称|注释|类型|
 |--|--|--|--|
@@ -72,7 +72,7 @@ $(Heater):pid                    pid模块
 
 ![PID 变量关系 ](/images/HeaterPID.png "集热器PID工作模块")
 
-####*3. 加热器温度控制部分*
+> *3. 加热器温度控制部分*
 
 `温度控制模块变量说明`
 
