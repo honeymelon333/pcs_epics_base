@@ -110,8 +110,10 @@ record(ai, "$(Heater):powerOutput") {
    field(LINR, "LINEAR")
    field(INP, "$(Heater):pid.OVAL PP NMS")
    field(DTYP, "Raw Soft Channel")
-   field(ASLO, "")
-   field(ESLO, "0.00406901")
+   field(ASLO, "0.00406901")
+    field(AOFF, "0")
+   field(ESLO, "1")
+   field(EOFF, "0")
    field(EGU, "%")
 }
 

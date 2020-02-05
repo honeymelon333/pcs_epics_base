@@ -2,9 +2,11 @@
 #! DBDSTART
 #! DBDEND
 record(ai, "$(TMP_FB)") {
+    field（PROC,2)
 }
 
 record(ao, "$(PW_OUT)") {
+   field（PROC,2)
 }
 
 record(bo, "$(CTRL_OUT)") {
@@ -12,6 +14,7 @@ record(bo, "$(CTRL_OUT)") {
 }
 
 record(ai, "$(ALRM_TMP_FB)") {
+field（PROC,2)
 }
 
 #! Record("$(TMP_FB)", 100, 200, -16777216, 0, "null")

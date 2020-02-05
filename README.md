@@ -12,7 +12,8 @@
 |gcc|4.8.5|
 |javaopenjdk |1.8.0_232|
 |CSS版本|cs-studio-ess-4.6.1.24|
-##一、 EPICS base 更新日志 
+
+## 一、 EPICS base 更新日志 
 ###  *base 文件夹*
 >基于 EPICS Base 3.14.12.5
 1. 增加对EPID的记录支持和设备支持。（Soft Channel）
