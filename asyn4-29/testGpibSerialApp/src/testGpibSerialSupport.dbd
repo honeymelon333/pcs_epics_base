@@ -1,0 +1,6 @@
+include "base.dbd"
+include "asyn.dbd"
+include "devTestGpibSerial.dbd"
+include "drvAsynSerialPort.dbd"
+include "drvAsynIPPort.dbd"
+registrar("echoDriverRegister")

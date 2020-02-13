@@ -1,0 +1,3 @@
+kernel//usr/local/epics/etherlabmaster-code/examples/mini/ec_mini.ko
+kernel//usr/local/epics/etherlabmaster-code/master/ec_master.ko
+kernel//usr/local/epics/etherlabmaster-code/devices/ec_generic.ko

@@ -1,0 +1,1 @@
+cmd_/usr/local/epics/etherlabmaster-code/examples/mini/ec_mini.o := ld -m elf_x86_64   -r -o /usr/local/epics/etherlabmaster-code/examples/mini/ec_mini.o /usr/local/epics/etherlabmaster-code/examples/mini/mini.o ; scripts/mod/modpost /usr/local/epics/etherlabmaster-code/examples/mini/ec_mini.o
