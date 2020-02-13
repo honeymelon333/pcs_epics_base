@@ -40,7 +40,7 @@ libethercat_la-common.lo: common.c /usr/include/stdc-predef.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- master.h ../include/ecrt.h
+ master.h ../include/ecrt.h liberror.h
 
 /usr/include/stdc-predef.h:
 
@@ -215,3 +215,5 @@ ioctl.h:
 master.h:
 
 ../include/ecrt.h:
+
+liberror.h:

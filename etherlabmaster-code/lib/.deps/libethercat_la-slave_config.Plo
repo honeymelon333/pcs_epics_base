@@ -29,7 +29,7 @@ libethercat_la-slave_config.lo: slave_config.c /usr/include/stdc-predef.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/sys/time.h \
  slave_config.h ../include/ecrt.h domain.h sdo_request.h reg_request.h \
- voe_handler.h master.h
+ voe_handler.h master.h liberror.h
 
 /usr/include/stdc-predef.h:
 
@@ -170,3 +170,5 @@ reg_request.h:
 voe_handler.h:
 
 master.h:
+
+liberror.h:

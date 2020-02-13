@@ -161,9 +161,10 @@ am__installdirs = "$(DESTDIR)$(libdir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
 libethercat_la_LIBADD =
 am_libethercat_la_OBJECTS = libethercat_la-common.lo \
-	libethercat_la-domain.lo libethercat_la-master.lo \
-	libethercat_la-reg_request.lo libethercat_la-sdo_request.lo \
-	libethercat_la-slave_config.lo libethercat_la-voe_handler.lo
+	libethercat_la-liberror.lo libethercat_la-domain.lo \
+	libethercat_la-master.lo libethercat_la-reg_request.lo \
+	libethercat_la-sdo_request.lo libethercat_la-slave_config.lo \
+	libethercat_la-voe_handler.lo
 libethercat_la_OBJECTS = $(am_libethercat_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -174,10 +175,12 @@ libethercat_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(libethercat_la_CFLAGS) $(CFLAGS) $(libethercat_la_LDFLAGS) \
 	$(LDFLAGS) -o $@
 libethercat_rtdm_la_LIBADD =
-am__libethercat_rtdm_la_SOURCES_DIST = common.c domain.c master.c \
-	reg_request.c sdo_request.c slave_config.c voe_handler.c
+am__libethercat_rtdm_la_SOURCES_DIST = common.c liberror.c domain.c \
+	master.c reg_request.c sdo_request.c slave_config.c \
+	voe_handler.c
 am__objects_1 = libethercat_rtdm_la-common.lo \
-	libethercat_rtdm_la-domain.lo libethercat_rtdm_la-master.lo \
+	libethercat_rtdm_la-liberror.lo libethercat_rtdm_la-domain.lo \
+	libethercat_rtdm_la-master.lo \
 	libethercat_rtdm_la-reg_request.lo \
 	libethercat_rtdm_la-sdo_request.lo \
 	libethercat_rtdm_la-slave_config.lo \
@@ -406,6 +409,7 @@ lib_LTLIBRARIES = libethercat.la $(am__append_1)
 #------------------------------------------------------------------------------
 libethercat_la_SOURCES = \
 	common.c \
+    liberror.c \
 	domain.c \
 	master.c \
 	reg_request.c \
@@ -515,6 +519,7 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_la-common.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_la-domain.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_la-liberror.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_la-master.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_la-reg_request.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_la-sdo_request.Plo@am__quote@
@@ -522,6 +527,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_la-voe_handler.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_rtdm_la-common.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_rtdm_la-domain.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_rtdm_la-liberror.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_rtdm_la-master.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_rtdm_la-reg_request.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libethercat_rtdm_la-sdo_request.Plo@am__quote@
@@ -555,6 +561,13 @@ libethercat_la-common.lo: common.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='common.c' object='libethercat_la-common.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libethercat_la_CFLAGS) $(CFLAGS) -c -o libethercat_la-common.lo `test -f 'common.c' || echo '$(srcdir)/'`common.c
+
+libethercat_la-liberror.lo: liberror.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libethercat_la_CFLAGS) $(CFLAGS) -MT libethercat_la-liberror.lo -MD -MP -MF $(DEPDIR)/libethercat_la-liberror.Tpo -c -o libethercat_la-liberror.lo `test -f 'liberror.c' || echo '$(srcdir)/'`liberror.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libethercat_la-liberror.Tpo $(DEPDIR)/libethercat_la-liberror.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='liberror.c' object='libethercat_la-liberror.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libethercat_la_CFLAGS) $(CFLAGS) -c -o libethercat_la-liberror.lo `test -f 'liberror.c' || echo '$(srcdir)/'`liberror.c
 
 libethercat_la-domain.lo: domain.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libethercat_la_CFLAGS) $(CFLAGS) -MT libethercat_la-domain.lo -MD -MP -MF $(DEPDIR)/libethercat_la-domain.Tpo -c -o libethercat_la-domain.lo `test -f 'domain.c' || echo '$(srcdir)/'`domain.c
@@ -604,6 +617,13 @@ libethercat_rtdm_la-common.lo: common.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='common.c' object='libethercat_rtdm_la-common.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libethercat_rtdm_la_CFLAGS) $(CFLAGS) -c -o libethercat_rtdm_la-common.lo `test -f 'common.c' || echo '$(srcdir)/'`common.c
+
+libethercat_rtdm_la-liberror.lo: liberror.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libethercat_rtdm_la_CFLAGS) $(CFLAGS) -MT libethercat_rtdm_la-liberror.lo -MD -MP -MF $(DEPDIR)/libethercat_rtdm_la-liberror.Tpo -c -o libethercat_rtdm_la-liberror.lo `test -f 'liberror.c' || echo '$(srcdir)/'`liberror.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libethercat_rtdm_la-liberror.Tpo $(DEPDIR)/libethercat_rtdm_la-liberror.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='liberror.c' object='libethercat_rtdm_la-liberror.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libethercat_rtdm_la_CFLAGS) $(CFLAGS) -c -o libethercat_rtdm_la-liberror.lo `test -f 'liberror.c' || echo '$(srcdir)/'`liberror.c
 
 libethercat_rtdm_la-domain.lo: domain.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libethercat_rtdm_la_CFLAGS) $(CFLAGS) -MT libethercat_rtdm_la-domain.lo -MD -MP -MF $(DEPDIR)/libethercat_rtdm_la-domain.Tpo -c -o libethercat_rtdm_la-domain.lo `test -f 'domain.c' || echo '$(srcdir)/'`domain.c

@@ -29,7 +29,7 @@ libethercat_la-reg_request.lo: reg_request.c /usr/include/stdc-predef.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- reg_request.h ../include/ecrt.h slave_config.h master.h
+ reg_request.h ../include/ecrt.h slave_config.h master.h liberror.h
 
 /usr/include/stdc-predef.h:
 
@@ -164,3 +164,5 @@ reg_request.h:
 slave_config.h:
 
 master.h:
+
+liberror.h:

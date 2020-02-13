@@ -28,7 +28,7 @@ libethercat_la-voe_handler.lo: voe_handler.c /usr/include/stdc-predef.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- voe_handler.h ../include/ecrt.h slave_config.h master.h
+ voe_handler.h ../include/ecrt.h slave_config.h master.h liberror.h
 
 /usr/include/stdc-predef.h:
 
@@ -163,3 +163,5 @@ voe_handler.h:
 slave_config.h:
 
 master.h:
+
+liberror.h:

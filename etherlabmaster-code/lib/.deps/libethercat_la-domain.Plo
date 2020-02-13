@@ -28,7 +28,7 @@ libethercat_la-domain.lo: domain.c /usr/include/stdc-predef.h \
  /usr/include/bits/stdlib-float.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/sys/time.h \
- domain.h ../include/ecrt.h master.h
+ domain.h ../include/ecrt.h master.h liberror.h
 
 /usr/include/stdc-predef.h:
 
@@ -161,3 +161,5 @@ domain.h:
 ../include/ecrt.h:
 
 master.h:
+
+liberror.h:

@@ -31,7 +31,7 @@ libethercat_la-master.lo: master.c /usr/include/stdc-predef.h \
  ../master/../config.h ../master/../include/ecrt.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/sys/time.h \
- master.h ../include/ecrt.h domain.h slave_config.h
+ master.h ../include/ecrt.h domain.h slave_config.h liberror.h
 
 /usr/include/stdc-predef.h:
 
@@ -180,3 +180,5 @@ master.h:
 domain.h:
 
 slave_config.h:
+
+liberror.h:

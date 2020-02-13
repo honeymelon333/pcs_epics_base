@@ -29,7 +29,7 @@ libethercat_la-sdo_request.lo: sdo_request.c /usr/include/stdc-predef.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- sdo_request.h ../include/ecrt.h slave_config.h master.h
+ sdo_request.h ../include/ecrt.h slave_config.h master.h liberror.h
 
 /usr/include/stdc-predef.h:
 
@@ -164,3 +164,5 @@ sdo_request.h:
 slave_config.h:
 
 master.h:
+
+liberror.h:
