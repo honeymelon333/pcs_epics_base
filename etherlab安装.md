@@ -16,26 +16,27 @@
 
 <code> \$ ./boostrap  # 根据系统生成配置温文件 </code>
 
-<code> \$ ./configure</code>
+<code> \$ ./configure --enble-generic --disable-r8169 --disable-8139too </code>
 <code> \$ make all modules</code>
 
 <code> \# make modules_install install </code>
 <code> \# depmod </code>
 
-... and linking the init script and copying the sysconfig file from $PREFIX/etc
-to the appropriate locations and customizing the sysconfig file.
+## 3. 开机自启动脚本
 
-<code> # ln -s \${PREFIX}/etc/init.d/ethercat /etc/init.d/ethercat
-<code> # cp \${PREFIX}/etc/sysconfig/ethercat /etc/sysconfig/ethercat
-<code> # vi /etc/sysconfig/ethercat
+script 文件夹中包含systemd 和 initd 两种进程使用启动脚本。[(systemd 与 initd 比较)](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html)
 
-Make sure, that the 'udev' package is installed, to automatically create the
-EtherCAT character devices. The character devices will be created with mode
-0660 and group root by default. If you want to give normal users reading
-access, create a udev rule like this:
+* **systemd**：
+> 系统服务：<u>/script/ethercat.service</u>
+> 配置文件 <u>/script/ethercat.conf</u>
 
-<code> # echo KERNEL==\"EtherCAT[0-9]*\", MODE=\"0664\" > /etc/udev/rules.d/99-EtherCAT.rules
+安装位置： /etc/ethercat.conf   修改该文件中
 
-Now you can start the EtherCAT master:
+<code>MASTER0_DEVICE="your mac addr"</code>
+<code>DEVICE_MODULES="generic" </code>
 
-<code> # /etc/init.d/ethercat start
+* **initd**:
+> 系统服务：<u>/script/init.d/ethercat</u>
+> 配置文件：<u>/script/sysconfig/ethercat</u>
+
+两种启动守护进程的方式作用一样。
