@@ -8,20 +8,22 @@
 
 |名称|版本号|
 |-----|------|
-|Linux| 3.10.0-1062.9.1.rt56.1033.el7.x86_64|
+|Linux| 3.10.0-1062.12.1.rt56.1042.el7.x86_64|
+|PREEMP[实时内核](/RTLinux安装.md)|kernel-rt.x86_64.0.3.10.0-1062.12.1.rt56.1042.el7|
 |gcc|4.8.5|
 |javaopenjdk |1.8.0_232|
 |CSS版本|cs-studio-ess-4.6.1.24|
 
+
 ## 一、 EPICS base 更新日志 
-###  *base 文件夹*
+###  *1. base 文件夹*
 >基于 EPICS Base 3.14.12.5
 1. 增加对EPID的记录支持和设备支持。（Soft Channel）
 2. 增加对Pulse Train的记录支持和设备支持。（发现Pulse Train必须有硬件支持，没有软的设备支持）
 3. 增加了SCAN 域的选项：“600 Second” “300 second” “.05 second”
 4. 用calc实现RS 触发器功能  
 ---
-### *HeaterIoc 文件夹*
+### *2. heaterIoc 文件夹*
 > 加热器IOC，包含PID温度控制、启停控制和超温连锁和复位
 
 >包含db文件
@@ -83,3 +85,12 @@ $(Heater):pid                    pid模块
 |阶段目标温度计算|\$(Heater):targetTempCalc|公式:(ABS(A-B)>5)?(A+C*(A>B?(-1):1)):B")<br>相当于RS触发器取反,S:复位 R:温度判断(B>D的判断值)<br>A：\$(TMP_FB) 目标温度反馈，可替代位目标温度的通道变量名<br>B：\$(Heater):targetTempSet 目标温度设定值<br>C：  3.3 度阶段升温阶梯<br>SCAN ： 扫描周期5分钟5分钟|calc|
 |温度控制|\$(Heater):pid|STPL：\$(Heater):targetTempCalc 目标温度<br>INP: \$(TMP_FB) 目标温度反馈，可替代位目标温度的通道变量名<br>OUTL:\$(PW_OUT)功率值输出通道0-24576|epid|
 |功率输出反馈值|\$(Heater):powerOutput|0-100%|ao|
+
+### *3.  css_opi 文件夹*
+> 加热器CSS 人机界面示例
+
+### *4.  etherlabmaster-code 文件夹*
+
+> 本文件夹包含IGH Etherlab驱动程序
+
+**安装方法:** [Etherlab安装.md](/etherlab安装.md)

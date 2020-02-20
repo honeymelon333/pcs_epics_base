@@ -28,6 +28,7 @@ script 文件夹中包含systemd 和 initd 两种进程使用启动脚本。[(sy
 
 * **systemd**：
 > 系统服务：<u>/script/ethercat.service</u>
+
 > 配置文件 <u>/script/ethercat.conf</u>
 
 安装位置： /etc/ethercat.conf   修改该文件中
@@ -37,6 +38,7 @@ script 文件夹中包含systemd 和 initd 两种进程使用启动脚本。[(sy
 
 * **initd**:
 > 系统服务：<u>/script/init.d/ethercat</u>
+
 > 配置文件：<u>/script/sysconfig/ethercat</u>
 
 两种启动守护进程的方式作用一样。
