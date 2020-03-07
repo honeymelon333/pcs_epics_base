@@ -1,0 +1,11 @@
+<chain>
+<device type_name="EK1100" revision="0x00120000" position="0" name="COUPLER0" />
+<device type_name="EL4024" revision="0x00140000" position="1" name="AO1" />
+<device type_name="EL4024" revision="0x00140000" position="2" name="AO2" />
+<device type_name="EL3054" revision="0x00140000" position="3" name="AI1"/>
+<device type_name="EL1034" revision="0x00120000" position="4" name="AV1"/>
+<device type_name="EL2624" revision="0x00120000" position="5" name="DO1"/>
+<device type_name="EL3314" revision="0x00170000" position="6" name="TI1"/>
+<device type_name="EL4024" revision="0x00140000" position="7" name="AO3"/>
+<device type_name="EK1110" revision="0x00110000" position="8" name="KY"/>
+</chain>

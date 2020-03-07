@@ -1,0 +1,13 @@
+
+TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+SUPPORT = /usr/locale/epics
+ASYN=/usr/local/epics/asyn4-29
+BUSY=$(SUPPORT)/busy-1-6-1
+
+# EPICS_BASE usually appears last so other apps can override stuff:
+EPICS_BASE=/usr/local/epics/base
+#EPICS_BASE=/scratch/rjq35657/R3.14.12.3/base
+
+# Set RULES here if you want to take build rules from somewhere
+# other than EPICS_BASE:
+#RULES=/path/to/epics/support/module/rules/x-y

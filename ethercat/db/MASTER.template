@@ -1,0 +1,44 @@
+# ethercat MASTER.template
+# % macro, DEVICE, EtherCAT Master
+# % macro, SCAN, poll period
+# % macro, name, Object name and gui association name
+
+# % gui, $(name=), edmembed, master-embed.edl, P=$(DEVICE)
+record(longin, "$(DEVICE):CYCLE")
+{
+  field("DTYP", "asynInt32")
+  field("INP",  "@asyn(MASTER0)Cycle")
+  field("SCAN", ".1 second")
+}
+
+record(longin, "$(DEVICE):MISSED")
+{
+  field("DTYP", "asynInt32")
+  field("INP",  "@asyn(MASTER0)Missed")
+  field("SCAN", "$(SCAN)")
+}
+
+record(longin, "$(DEVICE):WORKINGCOUNTER")
+{
+  field("DTYP", "asynInt32")
+  field("INP",  "@asyn(MASTER0)WorkingCounter")
+  field("SCAN", "$(SCAN)")
+  info("archiver", "1 Monitor")
+}
+
+record(mbbi, "$(DEVICE):WCSTATE")
+{
+  field("DTYP", "asynInt32")
+  field("INP",  "@asyn(MASTER0)WcState")
+  field("SCAN", "$(SCAN)")
+  field("ZRVL", "0")
+  field("ONVL", "1")
+  field("TWVL", "2")
+  field("ZRSV", "MAJOR")
+  field("ONSV", "MAJOR")
+  field("TWSV", "NO_ALARM")
+  field("ZRST", "ZERO")
+  field("ONST", "INCOMPLETE")
+  field("TWST", "COMPLETE")
+  info("archiver", "1 Monitor")
+}

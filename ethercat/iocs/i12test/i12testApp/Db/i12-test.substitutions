@@ -1,0 +1,18 @@
+file EL2624.template
+{
+{DEVICE="RJQ35657-ECAT-01", PORT="RELAY0", SCAN="I/O Intr"}
+}
+file EL1004.template
+{
+pattern {DEVICE, PORT, SCAN}
+{"RJQ35657-ECAT-02", "DIGIN0", "I/O Intr"}
+}
+file toggle.db
+{
+{P="",S="RJQ35657-TOGGL-01",OUTPV="RJQ35657-ECAT-01:Channel1",PERIOD="1 second"}
+{P="",S="RJQ35657-TOGGL-02",OUTPV="RJQ35657-ECAT-01:Channel2",PERIOD="5 second"}
+}
+file MASTER.template
+{
+{DEVICE="RJQ35657-ECAT-03", PORT="MASTER0", SCAN="I/O Intr"}
+}

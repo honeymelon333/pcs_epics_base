@@ -1,0 +1,168 @@
+/**
+\page release_notes Release notes
+
+\section rel6_0 Release 6-0
+
+BREAKING CHANGE for EL4134.template
+The scaling records :VOLTAGE were removed, as scaling from
+engineering units (-10V to 10V) to the raw integer for
+device output can be done directly in the AO :ANALOG records.
+Note that this doesn't change any macros, the only change is
+the 4 :VOLTAGE and 4 :CALCANALOG records have been removed.
+
+\section rel5_3 Release 5-3
+
+Add integral parameter to generic ADC.
+Use busy record for triggered acquisition.
+Update GADC documentation. Fixes jira issue I21-389.
+
+\section rel5_2 Release 5-2
+
+Added template for single channel control for EL4134 module,
+includes embedded and standalone edm gui
+
+\section rel5_1 Release 5-1
+
+Added control pvs to EL4134 template so demand value can be
+set in volts (-10 o 10 V) using the :VOLTAGE records, which
+are then converted to 16 bit integer used by the :ANALOG records
+which were introduced in version 5-0
+
+\section rel5_0 Release 5-0
+
+BREAKING CHANGE the EL4134 template now has shorter PV names,
+using the amended maketemplate script to generate it so the
+long pv names are substituted for this device.
+
+This changes the output pv names for the EL4134
+
+\section rel4_12 Release 4-12
+
+The EL4134 template's 4 output records had lengthy names, duplicate
+records have been added for these 4 channels with shorter names
+that should fit inside the EPICS 40 character limit when linking
+records.
+
+\section rel4_11 Release 4-11
+
+New module, el2502 (0x001a0000)), a 2-channel PWM output using 
+24 volts and 16-bit control of each channel.
+Includes a template for the module itself, a template for an 
+individual channel of the module that comes with edm screens.
+
+The screens can be referred to as $(name) for the main screen,
+and $(name)-embed for the embedded screen.
+
+\section rel4_10 Release 4-10
+
+Added gui screem for el2624 (4-channel relay), with macros in the 
+el2624 template file. There are now 4 instances of the embedded edm 
+file that come with an instance of the el2624 template.
+
+\section rel4_9 Release 4-9
+
+Rename template for EP3314-0002 slave.<br>
+
+It was found that a possible upgrade of the module to revision 13
+(0x0130002) would cause the template to no longer work. This is because
+between revision 12 and 13 (0x00120002 and 0x00130002) of this model
+of slave, the PDO names have changed.  The slave description files
+include the pdo names, the names are propagated as parameter names for
+the slave's asyn port. Solves DLS jira issue BC-376.  Further notes in
+<a href="http://confluence.diamond.ac.uk/x/3YPtAw">DLS confluence</a>.
+
+\section rel4_8 Release 4-8
+
+Update documentation and merge in modifications needed to support
+ADEthercat module.
+
+Merged updated Beckhoff slave description files to allow use of slaves
+with newer revisions. In particular the slaves below.
+
+EL2595 revision 0x130000
+EL3702 revision 0x30000,
+EL3104 revision 0x130000
+EL3602 revision 0x130000
+EL1014 revision 0x130000
+EL2124 revision 0x110000
+
+\section rel4_7 Release 4-7
+
+Add "version.h" to encode a module version used to verify that scanner
+and ioc are running the same release.  Unmatched releases can cause
+unexpected results to show upstream, because possible changes in the
+mapping of the packets sent from the scanner to the EPICS ioc. (jira bc-210)
+
+Modify serialtool and slaveinfo programs to check slaves are supported
+(jira bc-131)
+
+\section rel4_6 Release 4-6
+   Changes to CSS screens
+
+\section rel4_5 Release 4-5
+   Added ESI device descriptions to support EL3202-0010 revision 0x0014000a (Jira BC-128)
+
+\section rel4_3 Release 4-3
+   Add severity to records when bus disconnected
+
+An extra metadata parameter per slave is sent by the scanner to
+indicate the status of the cyclic slave information request
+ecrt_master_get_slave.  This value is used when not zero to indicate
+an asynDisconnected status for the port which translates into an
+invalid severity for the records using the slave's asyn port.
+
+\section rel4_2 Release 4-2
+   Add scanner support for multiple masters
+
+\section rel4_1 Release 4-1
+   Fix EL3702 oversampling support broken since 3-x
+   Dls trac #8598
+   Add doxygen documentation
+
+\section rel4_0 Release 4-0
+   SDO support, released from sdo_support branch,
+   not integrated in trunk
+
+\section rel3_1 Release 3-1 and 3-2
+   Add screens for EL2595
+
+\section rel3_0 Release 3-0
+   Added support for the el2595 led controller.
+
+   The slave initialisation was re-worked to allow a pdo mapping to be
+   added. Previous scanner xml configuration files are not compatible.
+
+   The iocbuilder support was modified to generate sync manager
+   information to match the new initialisation parameters needed.
+   A new element "PdoAssignment" was added for slaves that require an
+   additional pdo mapping at startup.
+
+   The release also addresses the generic ADC scaling. EGUF/EGUL
+   values of analogue records will need to be modified if using
+   generic adc support.
+
+Up to release 2-2, these are releases from the 'rhel6' branch in subversion.
+From release 2-3 these are releases from 'trunk'
+
+\section rel2_3 Release 2-3 05/02/14
+   Add documentation related to generic ADC.
+   Include patch by Damien Lynch.
+
+\section rel2_2 Release 2-2 29/10/13
+   Create asyn parameter to describe each slave
+   Modified scaling to improve support of 24-bit ADCs
+   Modified templates for EP3204-0002 and EP3314-0002 to show values
+   in deg C
+
+\section rel2_1 Release 2-1 19/07/13
+   Modifications in iocbuilder support
+
+\section rel2_0 Release 2-0 11/07/13
+   Release prepared for RHEL6 systems
+
+   uses patched ethercat library
+
+   http://lists.etherlab.org/pipermail/etherlab-dev/2013/000316.html
+   http://lists.etherlab.org/pipermail/etherlab-dev/attachments/20130702/7d75709f/attachment-0001.obj
+
+**/

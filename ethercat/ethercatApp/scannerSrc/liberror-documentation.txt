@@ -1,0 +1,2 @@
+
+to suppress errors to stderr, set the global ecrt_err_to_stderr to 0

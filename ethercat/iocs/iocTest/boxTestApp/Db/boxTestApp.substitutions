@@ -1,0 +1,16 @@
+file master.db 
+{
+    pattern {P, S, VADDR, PORT}
+    {"ECTEST", "", "999", "ECAT0"}
+
+}
+file el4134.db
+{
+    pattern {P, S, VADDR, PORT}
+    {"ECTEST",":300", "300", "ECAT0"}
+}
+file el2624.db
+{
+    pattern {P,S, VADDR, PORT}
+    {"ECTEST",":400", "400", "ECAT0"}
+}

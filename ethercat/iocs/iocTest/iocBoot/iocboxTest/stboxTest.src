@@ -1,0 +1,17 @@
+#!$(INSTALL)/bin/$(ARCH)/boxTest
+cd "$(INSTALL)"
+
+
+dbLoadDatabase("dbd/boxTest.dbd")
+boxTest_registerRecordDeviceDriver(pdbbase)
+
+
+ecAsynInit("/tmp/scanner", 100000)
+
+
+dbLoadRecords("db/boxTestApp.db")
+
+
+iocInit()
+
+

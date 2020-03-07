@@ -1,0 +1,17 @@
+file $(ETHERCAT)/db/MASTER.template
+{
+  pattern {DEVICE, PORT, SCAN}
+  {TESTIOC:MASTER, MASTER0, "1 second"}
+}
+
+file $(ETHERCAT)/db/NI9144-rev4.template
+{
+  pattern {DEVICE, SCAN, PORT}
+  {NI9144-REV-04, ".1 second", NI0}
+}
+file $(ETHERCAT)/db/gadc.template
+{
+  pattern {DEVICE, SCAN, PORT, SAMPLES, CHANNEL, INTSCAN}
+  {NI9144-REV-04,"I/O Intr", NI0, 10000, 1, "Passive"}
+  {NI9144-REV-04,"I/O Intr", NI0, 10000, 2, "Passive"}
+}
